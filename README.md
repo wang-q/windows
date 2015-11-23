@@ -19,18 +19,33 @@ vagrant up
 ## Post processing
 
 * Turn off system protection
-* Change Language for non-unicode programs
+* Turn on UAC
 * Install Language Pack (lp.cab)
     * Win+R ==> lpksetup
+* Change Language for non-unicode programs
 * Change DVD driver to E:, map Mac disk to D:
 * Install 360
-* Patches
-* .Net 4.5
+    * 360 yunpan
+    * 360 zip
+    * 360 sandbox
+    * flash player
+    * adobe reader
+    * directX
+    * freeime
+    * splayer
+    * .Net 4.5
 * office 2010 sp1
     * sp2
+* Windows and Office Patches
 * Microsoft Toolkit
 * CorelDraw X5
+* Tools
+    * TotalCmd
+    * ConEmu
+    * bin/
 * Strawberry Perl
+* Python 2.7
+* R
 
 ## Other boxes
 
