@@ -113,11 +113,6 @@
                     <Order>14</Order>
                     <Description>Disable Windows Updates</Description>
                 </SynchronousCommand>
-                <!--<SynchronousCommand wcm:action="add">-->
-                    <!--<CommandLine>cmd.exe /c a:\openssh.bat</CommandLine>-->
-                    <!--<Order>21</Order>-->
-                    <!--<Description>Install openssh</Description>-->
-                <!--</SynchronousCommand>-->
                 <SynchronousCommand wcm:action="add">
                     <CommandLine>cmd.exe /c a:\zz-start-sshd.cmd</CommandLine>
                     <Order>22</Order>
