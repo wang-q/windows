@@ -28,16 +28,11 @@ then
     mv windows_7_parallels.box $BASE_DIR/vm
 fi
 
-if [ ! -e $BASE_DIR/vm/windows_7_virtualbox.box ];
-then
-    packer build -only=virtualbox-iso windows_7.json
-    mv windows_7_virtualbox.box $BASE_DIR/vm
-fi
+#if [ ! -e $BASE_DIR/vm/windows_7_virtualbox.box ];
+#then
+#    packer build -only=virtualbox-iso windows_7.json
+#    mv windows_7_virtualbox.box $BASE_DIR/vm
+#fi
 
 echo "==> Add base box"
 vagrant box add windows_7 $BASE_DIR/vm/windows_7_parallels.box --force
-
-# useful repos:
-# * https://github.com/joefitzgerald/packer-windows
-# * https://github.com/dylanmei/packer-windows-templates
-# * https://github.com/boxcutter/windows
