@@ -1,0 +1,10 @@
+packer_cache/
+.vagrant/
+
+*.box
+*.iso
+*.vdi
+*.tar.gz
+
+.DS_Store
+._*
