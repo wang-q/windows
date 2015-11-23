@@ -1,5 +1,6 @@
 packer_cache/
 .vagrant/
+output-*/
 
 *.box
 *.iso

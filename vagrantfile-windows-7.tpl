@@ -16,14 +16,14 @@ Vagrant.configure("2") do |config|
   config.vm.provider :virtualbox do |v, override|
     v.gui = true
     v.customize ["modifyvm", :id, "--memory", 2048]
-    v.customize ["modifyvm", :id, "--cpus", 1]
+    v.customize ["modifyvm", :id, "--cpus", 2]
     v.customize ["modifyvm", :id, "--vram", "256"]
     v.customize ["setextradata", "global", "GUI/MaxGuestResolution", "any"]
     v.customize ["setextradata", :id, "CustomVideoMode1", "1024x768x32"]
   end
 
   config.vm.provider :parallels do |v, override|
-    v.customize ["set", :id, "--cpus", 1]
+    v.customize ["set", :id, "--cpus", 2]
     v.customize ["set", :id, "--memsize", 2048]
     v.customize ["set", :id, "--videosize", "256"]
   end

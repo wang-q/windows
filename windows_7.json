@@ -16,20 +16,11 @@
       "destination": "C:/Windows/Temp/SDelete.zip"
     },
     {
-      "execute_command": "{{.Vars}} cmd /c C:/Windows/Temp/script.bat",
-      "remote_path": "/tmp/script.bat",
       "scripts": [
-        "script/vagrant.bat",
         "script/vm-guest-tools.bat",
         "script/compact.bat"
       ],
-      "type": "shell"
-    },
-    {
-      "inline": [
-        "rm -f /tmp/script.bat"
-      ],
-      "type": "shell"
+      "type": "windows-shell"
     }
   ],
   "post-processors": [
@@ -43,6 +34,7 @@
   "builders": [
     {
       "boot_wait": "120s",
+      "communicator": "winrm",
       "disk_size": 102400,
       "floppy_files": [
         "floppy/win7/Autounattend.xml",
@@ -50,7 +42,6 @@
         "floppy/fixnetwork.ps1",
         "floppy/misc.bat",
         "floppy/disablewinupdate.bat",
-        "floppy/openssh.bat",
         "floppy/zz-start-sshd.cmd",
         "floppy/oracle-cert.cer"
       ],
@@ -59,9 +50,6 @@
       "iso_checksum": "A491F985DCCFB5863F31B728DDDBEDB2FF4DF8D1",
       "iso_checksum_type": "sha1",
       "iso_url": "file:///prepare/resource/en_windows_7_enterprise_with_sp1_x64_dvd_u_677651.iso",
-      "ssh_password": "vagrant",
-      "ssh_username": "vagrant",
-      "ssh_wait_timeout": "10000s",
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "type": "virtualbox-iso",
       "vboxmanage": [
@@ -78,10 +66,14 @@
           "2"
         ]
       ],
-      "vm_name": "windows_7"
+      "vm_name": "packer_windows_7",
+      "winrm_password": "vagrant",
+      "winrm_timeout": "10000s",
+      "winrm_username": "vagrant"
     },
     {
       "boot_wait": "120s",
+      "communicator": "winrm",
       "disk_size": 102400,
       "floppy_files": [
         "floppy/win7/Autounattend.xml",
@@ -89,7 +81,6 @@
         "floppy/fixnetwork.ps1",
         "floppy/misc.bat",
         "floppy/disablewinupdate.bat",
-        "floppy/openssh.bat",
         "floppy/zz-start-sshd.cmd",
         "floppy/oracle-cert.cer"
       ],
@@ -113,12 +104,12 @@
           "2"
         ]
       ],
-      "ssh_password": "vagrant",
-      "ssh_username": "vagrant",
-      "ssh_wait_timeout": "10000s",
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "type": "parallels-iso",
-      "vm_name": "windows_7"
+      "vm_name": "packer_windows_7",
+      "winrm_password": "vagrant",
+      "winrm_timeout": "10000s",
+      "winrm_username": "vagrant"
     }
   ]
 }
