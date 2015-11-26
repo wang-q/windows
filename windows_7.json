@@ -37,11 +37,11 @@
       "communicator": "winrm",
       "disk_size": 102400,
       "floppy_files": [
-        "floppy/win7/Autounattend.xml",
+        "floppy/Autounattend.xml",
         "floppy/install-winrm.cmd",
         "floppy/fixnetwork.ps1",
-        "floppy/misc.bat",
         "floppy/disablewinupdate.bat",
+        "floppy/misc.bat",
         "floppy/zz-start-sshd.cmd",
         "floppy/oracle-cert.cer"
       ],
@@ -66,7 +66,7 @@
           "2"
         ]
       ],
-      "vm_name": "packer_windows_7",
+      "vm_name": "packer-windows-7",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
       "winrm_username": "vagrant"
@@ -76,11 +76,11 @@
       "communicator": "winrm",
       "disk_size": 102400,
       "floppy_files": [
-        "floppy/win7/Autounattend.xml",
+        "floppy/Autounattend.xml",
         "floppy/install-winrm.cmd",
         "floppy/fixnetwork.ps1",
-        "floppy/misc.bat",
         "floppy/disablewinupdate.bat",
+        "floppy/misc.bat",
         "floppy/zz-start-sshd.cmd",
         "floppy/oracle-cert.cer"
       ],
@@ -106,7 +106,7 @@
       ],
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "type": "parallels-iso",
-      "vm_name": "packer_windows_7",
+      "vm_name": "packer-windows-7",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
       "winrm_username": "vagrant"

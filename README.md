@@ -1,5 +1,7 @@
 # A Windows 7 base box
 
+Install [Parallels Virtualization SDK](http://www.parallels.com/download/pvsdk/).
+
 ## Build
 
 ```bash
