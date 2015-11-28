@@ -35,4 +35,4 @@ fi
 #fi
 
 echo "==> Add base box"
-vagrant box add windows_7 $BASE_DIR/vm/windows_7_parallels.box --force
+vagrant box add windows-7 $BASE_DIR/vm/windows_7_parallels.box --force

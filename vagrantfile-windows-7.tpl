@@ -3,7 +3,7 @@
 
 Vagrant.configure("2") do |config|
   config.vm.define "vagrant-windows-7"
-  config.vm.box = "windows_7"
+  config.vm.box = "windows-7"
 
   # Port forward WinRM and RDP
   config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct:true
