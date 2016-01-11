@@ -36,8 +36,8 @@ vagrant up
     * freeime
     * splayer
     * .Net 4.5
-* office 2010 sp1
-    * sp2
+* office 2010 sp1 iso
+    * than sp2
 * Windows and Office Patches
 * Microsoft Toolkit
 * CorelDraw X5
