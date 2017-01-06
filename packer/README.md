@@ -6,7 +6,12 @@ Install
 ## Build
 
 ```bash
-cd ~/Scripts/egavm/packer-win
+ln -s /Volumes/Backup/software/OS/win7/en_windows_7_enterprise_with_sp1_x64_dvd_u_677651.iso \
+    /prepare/resource/en_windows_7_enterprise_with_sp1_x64_dvd_u_677651.iso
+```
+
+```bash
+cd ~/Scripts/windows/packer
 bash packer.sh
 ```
 
@@ -28,7 +33,6 @@ vagrant up
 * Change Language for non-unicode programs
 * Change DVD driver to E:, map Mac disk to D:
 * Install 360
-    * 360 yunpan
     * 360 zip
     * 360 sandbox
     * flash player
