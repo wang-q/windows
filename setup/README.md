@@ -18,9 +18,12 @@ choco install -y conemu
 * Development packages
 
 ```ps1
+choco install -y git
 choco install -y dotnet3.5
 choco install -y vcredist2008 vcredist2010 vcredist2012 vcredist2013 vcredist2015
 choco install -y jdk8
+choco install -y python2
+choco install -y r.project
 ```
 
 * CLI packages
