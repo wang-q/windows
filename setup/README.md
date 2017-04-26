@@ -20,15 +20,14 @@ choco install -y conemu
 ```ps1
 choco install -y dotnet3.5
 choco install -y vcredist2008 vcredist2010 vcredist2012 vcredist2013 vcredist2015
-choco install -y jre8
+choco install -y jdk8
 ```
 
 * CLI packages
 
 ```ps1
 choco install -y 7zip.commandline
-choco install -y curl
-choco install -y wget
+choco install -y curl wget aria2
 ```
 
 * GUI packages
@@ -36,6 +35,7 @@ choco install -y wget
 ```ps1
 choco install -y 7zip.install
 choco install -y atom
+choco install -y Everything
 choco install -y firefox
 choco install -y mpv
 choco install -y putty.portable
