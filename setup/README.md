@@ -41,6 +41,7 @@ choco install -y atom
 choco install -y Everything
 choco install -y firefox
 choco install -y mpv
+choco install -y netease-cloudmusic
 choco install -y putty.portable
 choco install -y rufus.portable
 choco install -y slack
