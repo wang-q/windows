@@ -6,7 +6,7 @@ Open a powershell with admin
 
 ```ps1
 Set-ExecutionPolicy bypass
-iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
 * Install comemu first for better terminal experience
