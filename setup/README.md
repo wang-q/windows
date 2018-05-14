@@ -21,6 +21,16 @@ choco install -y conemu
 choco install -y git
 choco install -y dotnet3.5
 choco install -y vcredist2008 vcredist2010 vcredist2012 vcredist2013 vcredist2015
+* Running scripts
+
+```cmd
+cd /d %UserProfile%
+mkdir Scripts
+cd Scripts
+git clone https://github.com/wang-q/windows
+powershell -executionpolicy bypass -File windows\setup\desktop_icons.ps1
+powershell -executionpolicy bypass -File windows\setup\win10_setup.ps1
+```
 choco install -y jdk8
 choco install -y python2
 choco install -y r.project
