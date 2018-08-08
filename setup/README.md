@@ -4,6 +4,8 @@ Open a powershell with admin
 
 * Install choco
 
+    .Net 4.0 will be downloaded under Windows 7
+
 ```ps1
 Set-ExecutionPolicy bypass
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
