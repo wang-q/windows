@@ -2,10 +2,8 @@
 
 export BASE_DIR=$HOME/Scripts/windows
 
-if [[ $(uname) == 'Darwin' ]];
-then
-    if [ hash packer 2>/dev/null ];
-    then
+if [[ $(uname) == 'Darwin' ]]; then
+    if [ hash packer 2>/dev/null ]; then
         echo "==> Install packer via brew"
         brew install packer
     else
@@ -23,14 +21,12 @@ wget -N http://download.sysinternals.com/files/SDelete.zip
 echo "==> Build Windows box"
 cd $BASE_DIR/packer
 
-if [ ! -e $BASE_DIR/vm/windows_7_parallels.box ];
-then
+if [ ! -e $BASE_DIR/vm/windows_7_parallels.box ]; then
     packer build -only=parallels-iso windows_7.json
     mv windows_7_parallels.box $BASE_DIR/vm
 fi
 
-#if [ ! -e $BASE_DIR/vm/windows_7_virtualbox.box ];
-#then
+#if [ ! -e $BASE_DIR/vm/windows_7_virtualbox.box ]; then
 #    packer build -only=virtualbox-iso windows_7.json
 #    mv windows_7_virtualbox.box $BASE_DIR/vm
 #fi
