@@ -1,3 +1,7 @@
+# Active Windows 10 via KMS
+
+http://kms.nju.edu.cn/
+
 # Install Scoop
 
 Open a powershell window

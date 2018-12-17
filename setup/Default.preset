@@ -41,9 +41,9 @@ DisableWAPPush                  # EnableWAPPush
 # SetUnknownNetworksPrivate     # SetUnknownNetworksPublic
 # DisableNetDevicesAutoInst     # EnableNetDevicesAutoInst
 # DisableFirewall               # EnableFirewall
-HideDefenderTrayIcon          # ShowDefenderTrayIcon
-DisableDefender               # EnableDefender
-DisableDefenderCloud          # EnableDefenderCloud
+# HideDefenderTrayIcon          # ShowDefenderTrayIcon
+# DisableDefender               # EnableDefender
+# DisableDefenderCloud          # EnableDefenderCloud
 # EnableCtrldFolderAccess       # DisableCtrldFolderAccess
 # EnableCIMemoryIntegrity       # DisableCIMemoryIntegrity
 # EnableDefenderAppGuard        # DisableDefenderAppGuard
