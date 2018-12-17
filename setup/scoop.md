@@ -56,7 +56,7 @@ scoop install vcredist
 ```cmd
 scoop install conemu everything rufus
 scoop install mpv-git # run mpv-install
-scoop install steam beyondcompare
+scoop install beyondcompare
 ```
 
 * WSL
