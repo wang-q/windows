@@ -1,10 +1,8 @@
-# Steps
+# Install Scoop
 
 Open a powershell window
 
 * Install `Scoop`
-
-    .Net 4.0 will be downloaded under Windows 7
 
 ```ps1
 set-executionpolicy remotesigned -s currentuser
@@ -17,6 +15,20 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 scoop install sudo
 sudo scoop install 7zip git openssh --global
 ```
+
+# Init Setup
+
+```ps1
+cd /d %UserProfile%
+mkdir Scripts
+cd Scripts
+git clone --recursive https://github.com/wang-q/windows
+
+cd windows/setup
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Script/Win10.ps1" -include "Win10-Initial-Setup-Script/Win10.psm1" -preset "Default.preset"
+```
+
+# Install packages
 
 * Open a new cmd window
 
