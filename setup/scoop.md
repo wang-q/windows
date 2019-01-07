@@ -58,7 +58,7 @@ scoop install vcredist
 ```cmd
 scoop install conemu everything rufus
 scoop install mpv-git # run mpv-install
-scoop install beyondcompare windirstat
+scoop install beyondcompare firefox slack windirstat
 scoop install github vscode terminus
 ```
 
