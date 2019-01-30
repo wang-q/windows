@@ -12,6 +12,7 @@ Powershell is more like bash then cmd.
 ```ps1
 set-executionpolicy remotesigned -s currentuser
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+
 ```
 
 * Install global
@@ -19,6 +20,7 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 ```ps1
 scoop install sudo
 sudo scoop install 7zip git openssh --global
+
 ```
 
 # Init Setup
@@ -30,6 +32,7 @@ git clone --recursive https://github.com/wang-q/windows
 
 cd ~/Scripts/windows/setup
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Script/Win10.ps1" -include "Win10-Initial-Setup-Script/Win10.psm1" -preset "Default.preset"
+
 ```
 
 TODO: SMB 1.0
@@ -39,9 +42,21 @@ TODO: SMB 1.0
 Scoop can utilize aria2 to use multi-connection downloads.
 
 ```ps1
-scoop install aria2 curl grep sed less touch
+scoop install aria2 curl
 
 scoop bucket add extras
+scoop bucket add java
+
+```
+
+* CLI packages
+
+```ps1
+scoop install dotnet-sdk
+scoop install vcredist
+
+sudo scoop install -g oraclejdk-lts
+
 ```
 
 * Development packages
@@ -49,6 +64,9 @@ scoop bucket add extras
 ```ps1
 scoop install dotnet-sdk
 scoop install vcredist
+
+sudo scoop install -g oraclejdk-lts
+
 ```
 
 * GUI packages
