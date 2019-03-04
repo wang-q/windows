@@ -51,16 +51,6 @@ scoop bucket add java
 
 ```
 
-* CLI packages
-
-```ps1
-scoop install dotnet-sdk
-scoop install vcredist
-
-sudo scoop install -g oraclejdk-lts
-
-```
-
 * Development packages
 
 ```ps1
