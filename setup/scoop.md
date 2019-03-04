@@ -25,6 +25,8 @@ sudo scoop install 7zip git openssh --global
 
 # Init Setup
 
+Close then reopen the powershell window to refresh %PATH%
+
 ```ps1
 mkdir -p ~/Scripts
 cd ~/Scripts
@@ -92,4 +94,5 @@ scoop install firefox notable slack
 
 ```ps1
 scoop list
+
 ```
