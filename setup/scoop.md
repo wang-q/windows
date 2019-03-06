@@ -19,7 +19,7 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 ```ps1
 scoop install sudo
-sudo scoop install 7zip git openssh --global
+sudo scoop install -g 7zip git openssh
 
 ```
 
@@ -54,8 +54,8 @@ scoop bucket add java
 * Development packages
 
 ```ps1
-scoop install dotnet-sdk
-scoop install vcredist
+sudo scoop install -g dotnet-sdk
+sudo scoop install -g vcredist
 
 sudo scoop install -g oraclejdk-lts
 
