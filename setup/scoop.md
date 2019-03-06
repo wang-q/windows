@@ -64,8 +64,11 @@ sudo scoop install -g oraclejdk-lts
 * GUI packages
 
 ```ps1
+# sudo
+sudo scoop install -g everything firefox
+
 # utils
-scoop install conemu everything rufus windirstat
+scoop install conemu rufus windirstat
 
 # development
 scoop install beyondcompare github vscode
@@ -74,7 +77,7 @@ scoop install beyondcompare github vscode
 scoop install mpv-git # run mpv-install
 scoop install handbrake
 
-scoop install firefox notable slack
+scoop install notable slack
 
 ```
 
