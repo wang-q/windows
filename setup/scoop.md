@@ -59,6 +59,9 @@ sudo scoop install -g vcredist
 
 sudo scoop install -g oraclejdk-lts
 
+scoop install miniconda3
+conda install -n root -c pscondaenvs pscondaenvs
+
 ```
 
 * GUI packages
@@ -74,9 +77,11 @@ scoop install conemu rufus windirstat
 scoop install beyondcompare github vscode
 
 # media
-scoop install mpv-git # run mpv-install
+scoop install mpv-git
+sudo ~\scoop\apps\mpv-git\current\installer\mpv-install.bat
 scoop install handbrake
 
+# others
 scoop install notable slack
 
 ```
