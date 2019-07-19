@@ -84,6 +84,9 @@ scoop install handbrake
 # others
 scoop install notable slack
 
+# Virtualization
+scoop install packer vagrant
+
 ```
 
 * Windows 7 games: https://winaero.com/download.php?view.1836
