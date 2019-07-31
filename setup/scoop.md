@@ -71,7 +71,7 @@ conda install -n root -c pscondaenvs pscondaenvs
 sudo scoop install -g everything firefox
 
 # utils
-scoop install conemu rufus windirstat
+scoop install rufus windirstat
 
 # development
 scoop install beyondcompare github vscode
