@@ -57,7 +57,7 @@ scoop bucket add java
 sudo scoop install -g dotnet-sdk
 sudo scoop install -g vcredist
 
-sudo scoop install -g oraclejdk-lts
+sudo scoop install -g openjdk9
 
 scoop install miniconda3
 conda install -n root -c pscondaenvs pscondaenvs
@@ -83,6 +83,9 @@ scoop install handbrake
 
 # others
 scoop install notable slack
+
+# Virtualization
+scoop install packer vagrant
 
 ```
 
