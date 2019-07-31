@@ -37,8 +37,6 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Scr
 
 ```
 
-TODO: SMB 1.0
-
 # Install packages
 
 Scoop can utilize aria2 to use multi-connection downloads.
