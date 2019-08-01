@@ -96,3 +96,4 @@ $RECYCLE.BIN/
 # packer and vagrant
 packer_cache/
 .vagrant
+output-*

@@ -19,11 +19,6 @@ echo ==^> Disabling automatic machine account password changes
 :: http://support.microsoft.com/kb/154501
 reg add "HKLM\System\CurrentControlSet\Services\Netlogon\Parameters" /v DisablePasswordChange /t REG_DWORD /d 2 /f
 
-title Disabling new network prompt. Please wait...
-
-echo ==^> Disabling new network prompt
-reg add "HKLM\System\CurrentControlSet\Control\Network\NewNetworkWindowOff"
-
 title Setting time format. Please wait...
 
 echo ==^> Setting time format to 24 hour time

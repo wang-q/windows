@@ -28,7 +28,7 @@
       "type": "vagrant",
       "keep_input_artifact": false,
       "output": "windows_7_{{.Provider}}.box",
-      "vagrantfile_template": "vagrantfile-windows-7.tpl"
+      "vagrantfile_template": "vagrantfile-windows-10.tpl"
     }
   ],
   "builders": [
@@ -66,7 +66,7 @@
           "2"
         ]
       ],
-      "vm_name": "packer-windows-7",
+      "vm_name": "packer-windows-10",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
       "winrm_username": "vagrant"
@@ -106,7 +106,7 @@
       ],
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "type": "parallels-iso",
-      "vm_name": "packer-windows-7",
+      "vm_name": "packer-windows-10",
       "winrm_password": "vagrant",
       "winrm_timeout": "10000s",
       "winrm_username": "vagrant"

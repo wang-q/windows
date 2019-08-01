@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vm.define "vagrant-windows-7"
-  config.vm.box = "windows-7"
+  config.vm.define "vagrant-windows-10"
+  config.vm.box = "windows-10"
 
   # Port forward WinRM and RDP
   config.vm.network :forwarded_port, guest: 3389, host: 3389, id: "rdp", auto_correct:true
@@ -15,7 +15,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.provider :virtualbox do |v, override|
     v.gui = true
-    v.name = "vagrant-windows-7"
+    v.name = "vagrant-windows-10"
     v.customize ["modifyvm", :id, "--memory", 2048]
     v.customize ["modifyvm", :id, "--cpus", 2]
     v.customize ["modifyvm", :id, "--vram", "256"]
@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provider :parallels do |v, override|
-    v.name = "vagrant-windows-7"
+    v.name = "vagrant-windows-10"
     v.customize ["set", :id, "--cpus", 2]
     v.customize ["set", :id, "--memsize", 2048]
     v.customize ["set", :id, "--videosize", "256"]
