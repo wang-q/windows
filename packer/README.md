@@ -1,39 +1,57 @@
-# A Windows 7 base box
+# A Windows 10 base box
 
-* Windows 7 Enterprise with Service Pack 1 (x64) - DVD (English)
-* `ed2k://|file|en_windows_7_enterprise_with_sp1_x64_dvd_u_677651.iso|3182604288|E4D1A2A7BB46706F6545E713EA32A5F3|/`
-* `en_windows_7_enterprise_with_sp1_x64_dvd_u_677651.iso`
+A Packer build to make a vanilla Windows 10 x64 box for Parallels.
 
-Install
-[Parallels Virtualization SDK](http://www.parallels.com/download/pvsdk/).
+The building steps contain:
 
-## Build
+* Install [Parallels Virtualization SDK](http://www.parallels.com/download/pvsdk/).
+* Download a Windows 10 x64 Enterprise trial ISO
+* Enable WinRM for packer/vagrant communicate to the VM
+* Create a `vagrant:vagrant` user:password with
+* Install VM guest additions
+* Compact disks
 
-Put or symlink `en_windows_7_enterprise_with_sp1_x64_dvd_u_677651.iso` under `/prepare/resource/`.
+## ISO
+
+* Windows 10 Enterprise 19h1 (x64)
+* `18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso`
 
 ```bash
 cd ~/Scripts/windows/packer
-bash packer.sh
+
+wget -N -P iso https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso
+
+openssl sha1 iso/*.iso
+
+wget -N -P iso http://www.7-zip.org/a/7z920-x64.msi
+wget -N -P iso http://downloads.sourceforge.net/project/ultradefrag/stable-release/6.1.0/ultradefrag-portable-6.1.0.bin.amd64.zip
+wget -N -P iso http://download.sysinternals.com/files/SDelete.zip
+
+```
+
+## Build
+
+```bash
+cd ~/Scripts/windows/packer
+
+packer build -only=parallels-iso windows_10.json
+
+mv windows_10_parallels.box ../vm
+
 ```
 
 ## Up
 
 ```bash
-vagrant box add windows-7 ~/Scripts/windows/vm/windows_7_parallels.box --force
+vagrant box add windows-10 ~/Scripts/windows/vm/windows_10_parallels.box --force
 
-cp ~/Scripts/windows/packer/vagrantfile-windows-7.tpl ~/Parallels/Vagrantfile
+cp ~/Scripts/windows/packer/vagrantfile-windows-10.tpl ~/Parallels/Vagrantfile
 
 cd ~/Parallels
+# vagrant plugin install vagrant-parallels
 vagrant up --provider parallels
+
 ```
-
-## Post processing
-
-* Turn off system protection
-* Turn on UAC
-* Install Language Pack (lp.cab)
-    * Win+R ==> lpksetup
-* Change Language for non-unicode programs
 
 ## Other boxes
 
@@ -41,3 +59,4 @@ And codes also come from these repos.
 
 * https://github.com/joefitzgerald/packer-windows
 * https://github.com/boxcutter/windows
+* https://github.com/luciusbono/Packer-Windows10
