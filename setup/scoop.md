@@ -1,6 +1,6 @@
 # Active Windows 10 via KMS
 
-http://kms.nju.edu.cn/
+<http://kms.nju.edu.cn/>
 
 # Install Scoop
 
@@ -23,9 +23,9 @@ sudo scoop install -g 7zip git openssh
 
 ```
 
-# Init Setup
+Close the powershell window and start a new one to refresh %PATH%
 
-Close then reopen the powershell window to refresh %PATH%
+# Init Setup
 
 ```ps1
 mkdir -p ~/Scripts
@@ -93,5 +93,23 @@ scoop install packer vagrant
 
 ```ps1
 scoop list
+
+```
+
+# Ubuntu 18.04
+
+Search `bash` in windows store or use the following command lines.
+
+```ps1
+Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
+Add-AppxPackage .\Ubuntu.appx
+
+```
+
+# Install Windows Terminal
+
+```ps1
+Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.2.1831.0/Microsoft.WindowsTerminal_0.2.1831.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
+Add-AppxPackage -path Microsoft.WindowsTerminal.msixbundle
 
 ```
