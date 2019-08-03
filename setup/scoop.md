@@ -42,7 +42,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Scr
 Scoop can utilize aria2 to use multi-connection downloads.
 
 ```ps1
-scoop install aria2 curl
+scoop install aria2 curl wget
 
 scoop bucket add extras
 scoop bucket add java
@@ -98,7 +98,7 @@ scoop list
 
 # Ubuntu 18.04
 
-Search `bash` in windows store or use the following command lines.
+Search `bash` in Microsoft Store or use the following command lines.
 
 ```ps1
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
