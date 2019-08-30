@@ -23,11 +23,16 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 ```ps1
 scoop install sudo
+sudo Add-MpPreference -ExclusionPath $HOME\scoop
+sudo Add-MpPreference -ExclusionPath 'C:\ProgramData\scoop'
+sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+scoop install aria2 dark innounp
+
 sudo scoop install -g 7zip git openssh
 
 ```
 
-Close the powershell window and start a new one to refresh %PATH%
+Close the powershell window and start a new one to refresh environment variables.
 
 # Init Setup
 
