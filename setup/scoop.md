@@ -76,7 +76,7 @@ sudo scoop install -g everything firefox
 scoop install rufus windirstat
 
 # development
-scoop install beyondcompare github vscode
+scoop install beyondcompare github vscode winscp
 
 # media
 scoop install mpv-git
@@ -113,7 +113,7 @@ Add-AppxPackage .\Ubuntu.appx
 # Install Windows Terminal
 
 ```ps1
-Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.3.2171.0/Microsoft.WindowsTerminal_0.3.2171.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
+Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.4.2382.0/Microsoft.WindowsTerminal_0.4.2382.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
 Add-AppxPackage -path Microsoft.WindowsTerminal.msixbundle
 
 ```
