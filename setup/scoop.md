@@ -1,11 +1,3 @@
-# Get iso
-
-Windows 10 Enterprise VL Insider Preview - Build 18950 Chinese (Simplified)
-
-# Active Windows 10 via KMS
-
-<http://kms.nju.edu.cn/>
-
 # Install Scoop
 
 Open a powershell window. All following commands pasted there.
@@ -29,8 +21,11 @@ sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 
 scoop install aria2 dark innounp
 
 sudo scoop install -g 7zip git openssh
+[environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
 
 ```
+
+Scoop can utilize aria2 to use multi-connection downloads.
 
 Close the powershell window and start a new one to refresh environment variables.
 
@@ -48,10 +43,8 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Scr
 
 # Install packages
 
-Scoop can utilize aria2 to use multi-connection downloads.
-
 ```ps1
-scoop install aria2 curl wget
+scoop install curl wget
 
 scoop bucket add extras
 scoop bucket add java
@@ -102,23 +95,5 @@ scoop install packer vagrant
 
 ```ps1
 scoop list
-
-```
-
-# Ubuntu 18.04
-
-Search `bash` in Microsoft Store or use the following command lines.
-
-```ps1
-Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
-Add-AppxPackage .\Ubuntu.appx
-
-```
-
-# Install Windows Terminal
-
-```ps1
-Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.4.2382.0/Microsoft.WindowsTerminal_0.4.2382.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
-Add-AppxPackage -path Microsoft.WindowsTerminal.msixbundle
 
 ```
