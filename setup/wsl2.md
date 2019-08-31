@@ -11,6 +11,7 @@ Windows 10 Enterprise VL Insider Preview - Build 18950 Chinese (Simplified)
 Open PowerShell as an Administrator
 
 ```ps1
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 
 ```
@@ -30,6 +31,14 @@ Search `bash` in Microsoft Store or use the following command lines.
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
 Add-AppxPackage .\Ubuntu.appx
 
+```
+
+Launch the distro from the Start menu, wait for a minute or two for the installation to complete,
+and set up a new Linux user account.
+
+The following command verifies the status of WSL:
+
+```ps1
 wsl -l -v
 
 ```
