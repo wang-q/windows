@@ -1,7 +1,7 @@
 # Install Scoop
 
 Open a powershell window. All following commands pasted there.
-Powershell is more like bash then cmd.
+`Powershell` is more like `bash` then `cmd`.
 
 * Install `Scoop`
 
@@ -11,7 +11,7 @@ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
 ```
 
-* Install global
+* Satisfy `scoop checkup`
 
 ```ps1
 scoop install sudo
@@ -29,7 +29,7 @@ Scoop can utilize aria2 to use multi-connection downloads.
 
 Close the powershell window and start a new one to refresh environment variables.
 
-# Init Setup
+# Adjusting Windows
 
 ```ps1
 mkdir -p ~/Scripts
