@@ -84,8 +84,32 @@ scoop install handbrake
 # others
 scoop install notable slack
 
-# Virtualization
-scoop install packer vagrant
+```
+
+* Rust
+
+```ps1
+scoop install rustup
+
+# Rust Language Server
+rustup self update
+rustup update
+cargo +nightly install racer
+rustup component add rls-preview
+rustup component add rust-analysis rust-src rustfmt
+
+# clippy
+rustup component add clippy-preview
+
+cargo install cargo-expand
+cargo install cargo-release
+
+```
+
+* vscode extensions
+
+```ps1
+code --install-extension rust-lang.rust
 
 ```
 
