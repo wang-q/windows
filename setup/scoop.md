@@ -59,9 +59,6 @@ sudo scoop install -g vcredist
 
 sudo scoop install -g openjdk
 
-scoop install miniconda3
-conda install -n root -c pscondaenvs pscondaenvs
-
 ```
 
 * GUI packages
@@ -86,23 +83,29 @@ scoop install notable slack
 
 ```
 
+* [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+
 * Rust
 
 ```ps1
-scoop install rustup
-
-# Rust Language Server
+# rustup
 rustup self update
 rustup update
-cargo +nightly install racer
-rustup component add rls-preview
-rustup component add rust-analysis rust-src rustfmt
+rustup toolchain install nightly-2019-09-05
+rustup default nightly-2019-09-05
+
+# Rust Language Server
+rustup component add rust-docs rust-src rust-analysis rustfmt
+rustup component add rls
+cargo install racer
 
 # clippy
-rustup component add clippy-preview
+rustup component add clippy
 
+# others
 cargo install cargo-expand
 cargo install cargo-release
+cargo install intspan
 
 ```
 
