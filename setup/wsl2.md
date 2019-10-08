@@ -46,7 +46,7 @@ wsl -l -v
 # Install Windows Terminal
 
 ```ps1
-Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.4.2382.0/Microsoft.WindowsTerminal_0.4.2382.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
+Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.5.2762.0/Microsoft.WindowsTerminal_0.5.2762.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
 Add-AppxPackage -path Microsoft.WindowsTerminal.msixbundle
 
 ```
