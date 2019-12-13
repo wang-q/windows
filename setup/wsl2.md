@@ -8,6 +8,8 @@ Windows 10 Enterprise VL Insider Preview - Build 18950 Chinese (Simplified)
 
 # Follow instructions of [this page](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
 
+Enable Virtualization in BIOS or VM
+
 Mount Windows iso to D: 
 
 Open PowerShell as an Administrator
