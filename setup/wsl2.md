@@ -1,6 +1,12 @@
-# Get iso
+# Get ISO
 
-Windows 10 Enterprise VL Insider Preview - Build 18950 Chinese (Simplified)
+Some features of Windows 10 (20H1) are needed here, so download Windows 10 Enterprise VL Insider
+Preview first:
+
+    * SLOW
+    * Build 19035
+    * English or Chinese Simplified
+    * 64-bit
 
 # Active Windows 10 via KMS
 
@@ -10,7 +16,7 @@ Windows 10 Enterprise VL Insider Preview - Build 18950 Chinese (Simplified)
 
 Enable Virtualization in BIOS or VM
 
-Mount Windows iso to D: 
+Mount Windows ISO to D: (or others)
 
 Open PowerShell as an Administrator
 
@@ -23,7 +29,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 
 ```
 
-Restart and set WSL 2 as default.
+Restart, then set WSL 2 as default.
 
 ```ps1
 wsl --set-default-version 2
