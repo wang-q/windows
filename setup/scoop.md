@@ -67,11 +67,11 @@ sudo scoop install -g openjdk
 # sudo
 sudo scoop install -g everything firefox
 
+# development
+sudo scoop install -g beyondcompare github vscode winscp
+
 # utils
 scoop install rufus windirstat
-
-# development
-scoop install beyondcompare github vscode winscp
 
 # media
 scoop install mpv-git
