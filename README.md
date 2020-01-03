@@ -77,6 +77,63 @@ Add-AppxPackage -path Microsoft.WindowsTerminal.msixbundle
 
 ```
 
+## Install Scoop
+
+Open a powershell window. All following commands pasted there.
+`Powershell` is more like `bash` then `cmd`.
+
+* Install `Scoop`
+
+```ps1
+set-executionpolicy remotesigned -s currentuser
+iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+
+```
+
+* Satisfy `scoop checkup`
+
+```ps1
+scoop install sudo
+sudo scoop install -g 7zip git openssh
+[environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
+
+sudo Add-MpPreference -ExclusionPath $HOME\scoop
+sudo Add-MpPreference -ExclusionPath 'C:\ProgramData\scoop'
+sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
+scoop install aria2 dark innounp
+
+```
+
+Scoop can utilize aria2 to use multi-connection downloads.
+
+Close the powershell window and start a new one to refresh environment variables.
+
+## OpenSSH
+
+Microsoft ported OpenSSH to Windows after [the 1809 release](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse),
+but I got some errors while trying installing OpenSSH.Server.
+
+So use the old way.
+    * [Ref 1](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH)
+    * [Ref 2](http://chrisarges.net/2019/07/16/openssh-install-on-windows.html)
+
+```ps1
+# OpenSSH
+Invoke-WebRequest 'https://github.com/PowerShell/Win32-OpenSSH/releases/download/v8.1.0.0p1-Beta/OpenSSH-Win64.zip' -OutFile 'OpenSSH-Win64.zip'
+
+sudo Expand-Archive -Path OpenSSH-Win64.zip -DestinationPath 'C:\Program Files\'
+
+cd 'C:\Program Files\OpenSSH-Win64\'
+.\install-sshd.ps1
+
+netsh advfirewall firewall add rule name=sshd dir=in action=allow protocol=TCP localport=22
+
+net start sshd
+
+Set-Service sshd -StartupType Automatic
+
+```
+
 ## Directory Organization
 
 * [`packer/`](packer/): Scirpts for building a Windows 7 box for Parallels.
