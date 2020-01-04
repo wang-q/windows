@@ -1,5 +1,20 @@
 # Setting-up scripts for Windows 10
 
+[TOC levels=1-3]: # " "
+- [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-10)
+    - [Get ISO](#get-iso)
+    - [Active Windows 10 via KMS](#active-windows-10-via-kms)
+    - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
+    - [WSL 2](#wsl-2)
+    - [Ubuntu 18.04](#ubuntu-1804)
+    - [Install Windows Terminal](#install-windows-terminal)
+    - [Install Scoop](#install-scoop)
+    - [OpenSSH Server](#openssh-server)
+    - [Directory Organization](#directory-organization)
+
+
+All following commands should be pasted to `Powershell`, which is more like `bash` then `cmd`.
+
 ## Get ISO
 
 Some features of Windows 10 (20H1) are needed here, so download [Windows 10 Enterprise VL Insider
@@ -17,8 +32,7 @@ Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 
 * Mount Windows ISO to D: (or others)
 
-* Open PowerShell as an Administrator. All following commands pasted there, `Powershell` is more
-  like `bash` then `cmd`.
+* Open PowerShell as an Administrator
 
 ```ps1
 # .Net 2.5 and 3
