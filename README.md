@@ -140,6 +140,9 @@ sudo Set-Service sshd -StartupType Automatic
 
 ```
 
+There is a bug when transfer [large files](https://github.com/PowerShell/Win32-OpenSSH/issues/1395)
+to Windows, be careful.
+
 ## Directory Organization
 
 * [`packer/`](packer/): Scirpts for building a Windows 7 box for Parallels.
