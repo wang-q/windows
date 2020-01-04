@@ -1,7 +1,7 @@
 # Install Scoop
 
-Open a powershell window. All following commands pasted there.
-`Powershell` is more like `bash` then `cmd`.
+Open a powershell window. All following commands pasted there. `Powershell` is more like `bash` then
+`cmd`.
 
 * Install `Scoop`
 
@@ -80,39 +80,6 @@ scoop install handbrake
 
 # others
 scoop install notable slack
-
-```
-
-* [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
-
-* Rust
-
-```ps1
-# rustup
-rustup self update
-rustup update
-rustup toolchain install nightly-2019-09-05
-rustup default nightly-2019-09-05
-
-# Rust Language Server
-rustup component add rust-docs rust-src rust-analysis rustfmt
-rustup component add rls
-cargo install racer
-
-# clippy
-rustup component add clippy
-
-# others
-cargo install cargo-expand
-cargo install cargo-release
-cargo install intspan
-
-```
-
-* vscode extensions
-
-```ps1
-code --install-extension rust-lang.rust
 
 ```
 
