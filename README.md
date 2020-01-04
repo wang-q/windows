@@ -10,6 +10,9 @@
     - [Install Windows Terminal](#install-windows-terminal)
     - [Install Scoop](#install-scoop)
     - [OpenSSH Server](#openssh-server)
+    - [Optional: Adjusting Windows](#optional-adjusting-windows)
+    - [Optional: Windows 7 games](#optional-windows-7-games)
+    - [Optional: Packages Managements](#optional-packages-managements)
     - [Directory Organization](#directory-organization)
 
 
@@ -158,6 +161,27 @@ sudo Set-Service sshd -StartupType Automatic
 
 There is a bug when transfer [large files](https://github.com/PowerShell/Win32-OpenSSH/issues/1395)
 to Windows, be careful.
+
+## Optional: Adjusting Windows
+
+```ps1
+mkdir -p ~/Scripts
+cd ~/Scripts
+git clone --recursive https://github.com/wang-q/windows
+
+cd ~/Scripts/windows/setup
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Script/Win10.ps1" -include "Win10-Initial-Setup-Script/Win10.psm1" -preset "Default.preset"
+
+```
+
+## Optional: Windows 7 games
+
+<https://winaero.com/download.php?view.1836>
+
+## Optional: Packages Managements
+
+* [`scoop.md`](setup/scoop.md)
+* [`msys2.md`](setup/msys2.md)
 
 ## Directory Organization
 

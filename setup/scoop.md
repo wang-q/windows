@@ -29,18 +29,6 @@ Scoop can utilize aria2 to use multi-connection downloads.
 
 Close the powershell window and start a new one to refresh environment variables.
 
-# Adjusting Windows
-
-```ps1
-mkdir -p ~/Scripts
-cd ~/Scripts
-git clone --recursive https://github.com/wang-q/windows
-
-cd ~/Scripts/windows/setup
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Script/Win10.ps1" -include "Win10-Initial-Setup-Script/Win10.psm1" -preset "Default.preset"
-
-```
-
 # Install packages
 
 ```ps1
@@ -82,8 +70,6 @@ scoop install handbrake
 scoop install notable slack
 
 ```
-
-* Windows 7 games: https://winaero.com/download.php?view.1836
 
 * List installed packages
 
