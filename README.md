@@ -17,7 +17,8 @@ Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 
 * Mount Windows ISO to D: (or others)
 
-* Open PowerShell as an Administrator
+* Open PowerShell as an Administrator. All following commands pasted there, `Powershell` is more
+    like `bash` then `cmd`.
 
 ```ps1
 # .Net 2.5 and 3
@@ -37,7 +38,10 @@ Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All
 * Open PowerShell as an Administrator
 
 ```ps1
+# WSL
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+# HyperV
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 
 ```
@@ -54,7 +58,9 @@ wsl --set-default-version 2
 Search `bash` in Microsoft Store or use the following command lines.
 
 ```ps1
-Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
+if (!(Test-Path Ubuntu.appx -PathType Leaf)) {
+    Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
+}
 Add-AppxPackage .\Ubuntu.appx
 
 ```
@@ -72,15 +78,14 @@ wsl -l -v
 ## Install Windows Terminal
 
 ```ps1
-Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.7.3451.0/Microsoft.WindowsTerminal_0.7.3451.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
+if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
+    Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.7.3451.0/Microsoft.WindowsTerminal_0.7.3451.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
+}
 Add-AppxPackage -path Microsoft.WindowsTerminal.msixbundle
 
 ```
 
 ## Install Scoop
-
-Open a powershell window. All following commands pasted there.
-`Powershell` is more like `bash` then `cmd`.
 
 * Install `Scoop`
 
@@ -88,15 +93,15 @@ Open a powershell window. All following commands pasted there.
 set-executionpolicy remotesigned -s currentuser
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
+scoop install sudo
+sudo scoop install -g 7zip git openssh
+[environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
+
 ```
 
 * Satisfy `scoop checkup`
 
 ```ps1
-scoop install sudo
-sudo scoop install -g 7zip git openssh
-[environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
-
 sudo Add-MpPreference -ExclusionPath $HOME\scoop
 sudo Add-MpPreference -ExclusionPath 'C:\ProgramData\scoop'
 sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
@@ -118,9 +123,9 @@ So use the old way.
     * [Ref 2](http://chrisarges.net/2019/07/16/openssh-install-on-windows.html)
 
 ```ps1
-# OpenSSH
-Invoke-WebRequest 'https://github.com/PowerShell/Win32-OpenSSH/releases/download/v8.1.0.0p1-Beta/OpenSSH-Win64.zip' -OutFile 'OpenSSH-Win64.zip'
-
+if (!(Test-Path OpenSSH-Win64.zip -PathType Leaf)) {
+    Invoke-WebRequest 'https://github.com/PowerShell/Win32-OpenSSH/releases/download/v8.1.0.0p1-Beta/OpenSSH-Win64.zip' -OutFile 'OpenSSH-Win64.zip'
+}
 sudo Expand-Archive -Path OpenSSH-Win64.zip -DestinationPath 'C:\Program Files\'
 
 cd 'C:\Program Files\OpenSSH-Win64\'
