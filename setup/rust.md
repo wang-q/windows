@@ -52,7 +52,10 @@ cd c:/vcpkg
 ./vcpkg integrate install
 
 # Add to Path
-sudo [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\vcpkg", "Machine")
+sudo [Environment]::SetEnvironmentVariable(
+    "Path",
+    [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine) + ";C:\vcpkg",
+    [EnvironmentVariableTarget]::Machine)
 
 ```
 
