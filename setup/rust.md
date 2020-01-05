@@ -38,10 +38,10 @@ code --install-extension rust-lang.rust
 
 ## [`vcpkg`](https://github.com/microsoft/vcpkg)
 
-* Install vcpkg
+* Install vcpkg. Open PowerShell as an Administrator
 
 ```ps1
-sudo scoop install -g cmake
+scoop install -g cmake
 
 cd c:/
 git clone https://github.com/Microsoft/vcpkg.git
@@ -52,7 +52,7 @@ cd c:/vcpkg
 ./vcpkg integrate install
 
 # Add to Path
-sudo [Environment]::SetEnvironmentVariable(
+[Environment]::SetEnvironmentVariable(
     "Path",
     [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine) + ";C:\vcpkg",
     [EnvironmentVariableTarget]::Machine)
