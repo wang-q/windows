@@ -46,6 +46,7 @@ sudo scoop install -g dotnet-sdk
 sudo scoop install -g vcredist
 
 sudo scoop install -g openjdk
+sudo scoop install -g cmake
 
 ```
 
@@ -60,6 +61,7 @@ sudo scoop install -g beyondcompare github vscode winscp
 
 # utils
 scoop install rufus windirstat
+scoop install bandizip quicklook
 
 # media
 scoop install mpv-git
