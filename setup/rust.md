@@ -1,4 +1,4 @@
-# Rust
+# Rust and C/C++
 
 ## [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
@@ -62,6 +62,6 @@ cd c:/vcpkg
 * Install some packages
 
 ```ps1
-vcpkg install zlib curl 
+vcpkg install zlib curl sqlite3
 
 ```
