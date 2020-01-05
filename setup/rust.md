@@ -1,10 +1,10 @@
 # Rust
 
-* [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
+## [C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/)
 
-    * Select `Desktop development with C++` and Language packs English/Chinese
+Select `Desktop development with C++` and Language packs English/Chinese
 
-* `rustup`
+## [`rustup`](https://rustup.rs/)
 
 ```ps1
 # rustup
@@ -33,5 +33,32 @@ cargo install intspan
 
 ```ps1
 code --install-extension rust-lang.rust
+
+```
+
+## [`vcpkg`](https://github.com/microsoft/vcpkg)
+
+* Install vcpkg
+
+```ps1
+sudo scoop install -g cmake
+
+cd c:/
+git clone https://github.com/Microsoft/vcpkg.git
+
+cd c:/vcpkg
+./bootstrap-vcpkg.bat
+
+./vcpkg integrate install
+
+# Add to Path
+sudo [Environment]::SetEnvironmentVariable("Path", $env:Path + ";C:\vcpkg", "Machine")
+
+```
+
+* Install some packages
+
+```ps1
+vcpkg install zlib curl 
 
 ```
