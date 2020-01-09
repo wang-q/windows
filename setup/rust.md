@@ -10,15 +10,12 @@ Select `Desktop development with C++` and Language packs English/Chinese
 # rustup
 rustup self update
 rustup update
-rustup toolchain install nightly
-rustup default nightly
-
-# Rust Language Server
+rustup toolchain add nightly
 rustup component add rust-docs rust-src rust-analysis rustfmt
-rustup component add rls
-cargo install racer
 
-# clippy
+# tools
+rustup component add rls
+cargo +nightly install racer
 rustup component add clippy
 
 # others
