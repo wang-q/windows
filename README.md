@@ -160,7 +160,7 @@ sudo Set-Service sshd -StartupType Automatic
 ```
 
 There is a bug when transfer [large files](https://github.com/PowerShell/Win32-OpenSSH/issues/1395)
-to Windows, be careful.
+via sftp to Windows, be careful.
 
 ## Optional: Adjusting Windows
 
@@ -185,6 +185,6 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Scr
 
 ## Directory Organization
 
-* [`packer/`](packer/): Scirpts for building a Windows 7 box for Parallels.
+* [`packer/`](packer/): Scirpts for building a Windows 10 box for Parallels.
 
 * [`setup/`](setup/): Scirpts for setting-up Windows.
