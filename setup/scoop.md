@@ -32,7 +32,7 @@ Close the powershell window and start a new one to refresh environment variables
 # Install packages
 
 ```ps1
-scoop install curl wget
+scoop install curl wget gzip
 
 scoop bucket add extras
 scoop bucket add java
@@ -48,6 +48,8 @@ sudo scoop install -g vcredist
 sudo scoop install -g openjdk
 sudo scoop install -g cmake
 
+sudo scoop install -g perl python
+
 ```
 
 * GUI packages
@@ -61,7 +63,7 @@ sudo scoop install -g beyondcompare github vscode winscp
 
 # utils
 scoop install rufus windirstat
-scoop install bandizip quicklook
+scoop install bandizip quicklook wox
 
 # media
 scoop install mpv-git
