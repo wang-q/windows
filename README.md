@@ -130,7 +130,7 @@ Scoop can utilize aria2 to use multi-connection downloads.
 
 Close the powershell window and start a new one to refresh environment variables.
 
-## OpenSSH Server
+## Optional: OpenSSH Server
 
 Microsoft ported OpenSSH to Windows after
 [the 1809 release](https://docs.microsoft.com/zh-cn/windows-server/administration/openssh/openssh_install_firstuse),
