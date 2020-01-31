@@ -9,7 +9,7 @@
     - [Ubuntu 18.04](#ubuntu-1804)
     - [Install Windows Terminal](#install-windows-terminal)
     - [Install Scoop](#install-scoop)
-    - [OpenSSH Server](#openssh-server)
+    - [Optional: OpenSSH Server](#optional-openssh-server)
     - [Optional: Adjusting Windows](#optional-adjusting-windows)
     - [Optional: Windows 7 games](#optional-windows-7-games)
     - [Optional: Packages Managements](#optional-packages-managements)
