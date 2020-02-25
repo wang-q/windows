@@ -59,7 +59,7 @@ sudo scoop install -g perl python
 sudo scoop install -g everything firefox
 
 # development
-sudo scoop install -g beyondcompare github vscode winscp
+scoop install beyondcompare github vscode winscp
 
 # utils
 scoop install rufus windirstat
