@@ -5,6 +5,7 @@
 - [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-10)
   - [Get ISO](#get-iso)
   - [Active Windows 10 via KMS](#active-windows-10-via-kms)
+  - [System Info](#system-info)
   - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
   - [WSL 2](#wsl-2)
   - [Ubuntu 18.04](#ubuntu-1804)
