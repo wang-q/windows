@@ -32,6 +32,17 @@ Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 
 <http://kms.nju.edu.cn/>
 
+## System Info
+
+```cmd
+# simple
+winver
+
+# details
+systeminfo
+
+```
+
 ## Enable some optional features of Windows 10
 
 * Mount Windows ISO to D: (or others)
