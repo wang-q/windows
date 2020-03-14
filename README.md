@@ -5,7 +5,7 @@
 - [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-10)
   - [Get ISO](#get-iso)
   - [Active Windows 10 via KMS](#active-windows-10-via-kms)
-  - [System Info](#system-info)
+  - [Update Windows](#update-windows)
   - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
   - [WSL 2](#wsl-2)
   - [Ubuntu 18.04](#ubuntu-1804)
@@ -25,7 +25,7 @@ All following commands should be pasted to `Powershell`, which is more like `bas
 Some features of Windows 10 (20H1) are needed here, so download [Windows 10 Enterprise VL Insider
 Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 
-* Build 19041
+* Build 19041.84
 * English or Chinese Simplified
 * 64-bit
 
@@ -33,7 +33,9 @@ Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 
 <http://kms.nju.edu.cn/>
 
-## System Info
+## Update Windows
+
+Update Windows and then check system info
 
 ```cmd
 # simple
@@ -43,6 +45,8 @@ winver
 systeminfo
 
 ```
+
+After Windows updating, Windows version is 19041.153 as my current date.
 
 ## Enable some optional features of Windows 10
 
