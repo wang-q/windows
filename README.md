@@ -48,6 +48,9 @@ systeminfo
 
 After Windows updating, Windows version is 19041.153 as my current date.
 
+Updating the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
+necessarily.
+
 ## Enable some optional features of Windows 10
 
 * Mount Windows ISO to D: (or others)
