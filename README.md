@@ -1,19 +1,20 @@
 # Setting-up scripts for Windows 10
 
-[TOC levels=1-3]: # " "
+[TOC levels=1-3]: # ""
+
 - [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-10)
-    - [Get ISO](#get-iso)
-    - [Active Windows 10 via KMS](#active-windows-10-via-kms)
-    - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
-    - [WSL 2](#wsl-2)
-    - [Ubuntu 18.04](#ubuntu-1804)
-    - [Install Windows Terminal](#install-windows-terminal)
-    - [Install Scoop](#install-scoop)
-    - [Optional: OpenSSH Server](#optional-openssh-server)
-    - [Optional: Adjusting Windows](#optional-adjusting-windows)
-    - [Optional: Windows 7 games](#optional-windows-7-games)
-    - [Optional: Packages Managements](#optional-packages-managements)
-    - [Directory Organization](#directory-organization)
+  - [Get ISO](#get-iso)
+  - [Active Windows 10 via KMS](#active-windows-10-via-kms)
+  - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
+  - [WSL 2](#wsl-2)
+  - [Ubuntu 18.04](#ubuntu-1804)
+  - [Install Windows Terminal](#install-windows-terminal)
+  - [Install Scoop](#install-scoop)
+  - [Optional: OpenSSH Server](#optional-openssh-server)
+  - [Optional: Adjusting Windows](#optional-adjusting-windows)
+  - [Optional: Windows 7 games](#optional-windows-7-games)
+  - [Optional: Packages Managements](#optional-packages-managements)
+  - [Directory Organization](#directory-organization)
 
 
 All following commands should be pasted to `Powershell`, which is more like `bash` then `cmd`.
@@ -23,7 +24,7 @@ All following commands should be pasted to `Powershell`, which is more like `bas
 Some features of Windows 10 (20H1) are needed here, so download [Windows 10 Enterprise VL Insider
 Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 
-* Build 19035
+* Build 19041
 * English or Chinese Simplified
 * 64-bit
 
@@ -96,7 +97,7 @@ wsl -l -v
 
 ```ps1
 if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
-    Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.7.3451.0/Microsoft.WindowsTerminal_0.7.3451.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
+    Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.9.433.0/Microsoft.WindowsTerminal_0.9.433.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
 }
 Add-AppxPackage -path Microsoft.WindowsTerminal.msixbundle
 
@@ -188,3 +189,4 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Scr
 * [`packer/`](packer/): Scirpts for building a Windows 10 box for Parallels.
 
 * [`setup/`](setup/): Scirpts for setting-up Windows.
+
