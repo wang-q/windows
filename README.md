@@ -48,9 +48,6 @@ systeminfo
 
 After Windows updating, Windows version is 19041.153 as my current date.
 
-Updating the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
-necessarily.
-
 ## Enable some optional features of Windows 10
 
 * Mount Windows ISO to D: (or others)
@@ -85,6 +82,10 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 
 Restart, then set WSL 2 as default.
 
+Updating the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
+necessarily.
+
+
 ```ps1
 wsl --set-default-version 2
 
@@ -113,6 +114,8 @@ wsl -l -v
 ```
 
 ## Install Windows Terminal
+
+Search `Windows Terminal` in Microsoft Store or use the following command lines.
 
 ```ps1
 if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
@@ -193,6 +196,8 @@ cd ~/Scripts/windows/setup
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Script/Win10.ps1" -include "Win10-Initial-Setup-Script/Win10.psm1" -preset "Default.preset"
 
 ```
+
+Get updates from Microsoft Store.
 
 ## Optional: Windows 7 games
 
