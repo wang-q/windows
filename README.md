@@ -208,6 +208,10 @@ Get updates from Microsoft Store.
 * [`scoop.md`](setup/scoop.md)
 * [`msys2.md`](setup/msys2.md)
 
+## Optional: C++ and Rust
+
+* [`rust.md`](setup/rust.md)
+
 ## Directory Organization
 
 * [`packer/`](packer/): Scirpts for building a Windows 10 box for Parallels.
