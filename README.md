@@ -15,6 +15,7 @@
   - [Optional: Adjusting Windows](#optional-adjusting-windows)
   - [Optional: Windows 7 games](#optional-windows-7-games)
   - [Optional: Packages Managements](#optional-packages-managements)
+  - [Optional: Rust and C/C++](#optional-rust-and-cc)
   - [Directory Organization](#directory-organization)
 
 
@@ -208,7 +209,7 @@ Get updates from Microsoft Store.
 * [`scoop.md`](setup/scoop.md)
 * [`msys2.md`](setup/msys2.md)
 
-## Optional: C++ and Rust
+## Optional: Rust and C/C++
 
 * [`rust.md`](setup/rust.md)
 
