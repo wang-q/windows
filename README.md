@@ -4,8 +4,7 @@
 
 - [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-10)
   - [Get ISO](#get-iso)
-  - [Active Windows 10 via KMS](#active-windows-10-via-kms)
-  - [Update Windows](#update-windows)
+  - [Install, active and update Windows](#install-active-and-update-windows)
   - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
   - [WSL 2](#wsl-2)
   - [Ubuntu 18.04](#ubuntu-1804)
@@ -30,13 +29,13 @@ Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 * English or Chinese Simplified
 * 64-bit
 
-## Active Windows 10 via KMS
+## Install, active and update Windows
 
-<http://kms.nju.edu.cn/>
+* Enable Virtualization in BIOS or VM
 
-## Update Windows
+* Active Windows 10 via KMS, <http://kms.nju.edu.cn/>
 
-Update Windows and then check system info
+* Update Windows and then check system info
 
 ```ps1
 # simple
@@ -66,12 +65,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All
 
 ## WSL 2
 
-* Enable Virtualization in BIOS or VM
-
 * Follow instructions of [this page](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
-
-Update the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
-necessarily.
 
 * Open PowerShell as an Administrator
 
@@ -83,6 +77,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 
 ```
+
+Update the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
+necessarily.
 
 Restart, then set WSL 2 as default.
 
@@ -123,35 +120,9 @@ Add-AppxPackage -path Microsoft.DesktopAppInstaller.appxbundle
 
 winget install Terminal
 
-```
-
-## Install Scoop
-
-* Install `Scoop`
-
-```ps1
-set-executionpolicy remotesigned -s currentuser
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
-
-scoop install sudo
-sudo scoop install -g 7zip git openssh
-[environment]::setenvironmentvariable('GIT_SSH', (resolve-path (scoop which ssh)), 'USER')
+winget install -e --id Git.Git
 
 ```
-
-* Satisfy `scoop checkup`
-
-```ps1
-sudo Add-MpPreference -ExclusionPath $HOME\scoop
-sudo Add-MpPreference -ExclusionPath 'C:\ProgramData\scoop'
-sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
-scoop install aria2 dark innounp
-
-```
-
-Scoop can utilize aria2 to use multi-connection downloads.
-
-Close the powershell window and start a new one to refresh environment variables.
 
 ## Optional: Adjusting Windows
 
@@ -173,7 +144,7 @@ Get updates from Microsoft Store.
 # programming
 winget install AdoptOpenJDK.OpenJDK
 winget install Python.Python
-winget install Strawberry Perl
+winget install 'Strawberry Perl'
 winget install cmake
 
 # utils
@@ -183,14 +154,14 @@ winget install Rufus
 winget install QuickLook
 
 # develpment
-winget install GitHub Desktop
+winget install 'GitHub Desktop'
 winget install WinSCP
 winget install vscode
-winget install Beyond Compare 4
+winget install 'Beyond Compare 4'
 
 # GUI
 winget install Firefox
-winget install Adobe Acrobat Reader DC
+winget install 'Adobe Acrobat Reader DC'
 
 ```
 
