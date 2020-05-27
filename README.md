@@ -9,17 +9,17 @@
   - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
   - [WSL 2](#wsl-2)
   - [Ubuntu 18.04](#ubuntu-1804)
-  - [Install Windows Terminal](#install-windows-terminal)
+  - [Install `winget` and `Windows Terminal`](#install-winget-and-windows-terminal)
   - [Install Scoop](#install-scoop)
-  - [Optional: OpenSSH Server](#optional-openssh-server)
   - [Optional: Adjusting Windows](#optional-adjusting-windows)
+  - [Optional: winget-pkgs](#optional-winget-pkgs)
   - [Optional: Windows 7 games](#optional-windows-7-games)
   - [Optional: Packages Managements](#optional-packages-managements)
   - [Optional: Rust and C/C++](#optional-rust-and-cc)
   - [Directory Organization](#directory-organization)
 
 
-All following commands should be pasted to `Powershell`, which is more like `bash` then `cmd`.
+Most following commands should be pasted to `Powershell`.
 
 ## Get ISO
 
@@ -38,7 +38,7 @@ Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 
 Update Windows and then check system info
 
-```cmd
+```ps1
 # simple
 winver
 
@@ -47,7 +47,7 @@ systeminfo
 
 ```
 
-After Windows updating, Windows version is 19041.153 as my current date.
+After Windows updating, Windows version is 19041.264 as my current date.
 
 ## Enable some optional features of Windows 10
 
@@ -70,6 +70,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All
 
 * Follow instructions of [this page](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
 
+Update the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
+necessarily.
+
 * Open PowerShell as an Administrator
 
 ```ps1
@@ -82,10 +85,6 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 
 Restart, then set WSL 2 as default.
-
-Updating the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
-necessarily.
-
 
 ```ps1
 wsl --set-default-version 2
@@ -114,15 +113,15 @@ wsl -l -v
 
 ```
 
-## Install Windows Terminal
-
-Search `Windows Terminal` in Microsoft Store or use the following command lines.
+## Install `winget` and `Windows Terminal`
 
 ```ps1
 if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
-    Invoke-WebRequest 'https://github.com/microsoft/terminal/releases/download/v0.9.433.0/Microsoft.WindowsTerminal_0.9.433.0_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.WindowsTerminal.msixbundle'
+    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v0.1.4331-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle' -OutFile 'Microsoft.DesktopAppInstaller.appxbundle'
 }
-Add-AppxPackage -path Microsoft.WindowsTerminal.msixbundle
+Add-AppxPackage -path Microsoft.DesktopAppInstaller.appxbundle
+
+winget install Terminal
 
 ```
 
@@ -167,6 +166,33 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Scr
 ```
 
 Get updates from Microsoft Store.
+
+## Optional: winget-pkgs
+
+```ps1
+# programming
+winget install AdoptOpenJDK.OpenJDK
+winget install Python.Python
+winget install Strawberry Perl
+winget install cmake
+
+# utils
+winget install everything
+winget install Bandizip
+winget install Rufus
+winget install QuickLook
+
+# develpment
+winget install GitHub Desktop
+winget install WinSCP
+winget install vscode
+winget install Beyond Compare 4
+
+# GUI
+winget install Firefox
+winget install Adobe Acrobat Reader DC
+
+```
 
 ## Optional: Windows 7 games
 
