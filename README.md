@@ -9,7 +9,6 @@
   - [WSL 2](#wsl-2)
   - [Ubuntu 18.04](#ubuntu-1804)
   - [Install `winget` and `Windows Terminal`](#install-winget-and-windows-terminal)
-  - [Install Scoop](#install-scoop)
   - [Optional: Adjusting Windows](#optional-adjusting-windows)
   - [Optional: winget-pkgs](#optional-winget-pkgs)
   - [Optional: Windows 7 games](#optional-windows-7-games)
