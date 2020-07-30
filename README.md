@@ -21,12 +21,16 @@ Most following commands should be pasted to `Powershell`.
 
 ## Get ISO
 
-Some features of Windows 10 (20H1) are needed here, so download [Windows 10 Enterprise VL Insider
+Some features of Windows 10 (20H1/2004) are needed here, so download [Windows 10 Enterprise VL Insider
 Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
 
 * Build 19041.84
 * English or Chinese Simplified
 * 64-bit
+
+Or use the following link:
+
+* <ed2k://|file|cn_windows_10_business_editions_version_2004_updated_july_2020_x64_dvd_f4ed1845.iso|5207683072|AD9E2EA63E25E84243B8034BE2BAAB17|/>
 
 ## Install, active and update Windows
 
@@ -45,7 +49,7 @@ systeminfo
 
 ```
 
-After Windows updating, Windows version is 19041.264 as my current date.
+After Windows updating, Windows version is 19041.388 as my current date.
 
 ## Enable some optional features of Windows 10
 
@@ -93,7 +97,7 @@ Search `bash` in Microsoft Store or use the following command lines.
 
 ```ps1
 if (!(Test-Path Ubuntu.appx -PathType Leaf)) {
-    Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1804 -OutFile Ubuntu.appx -UseBasicParsing
+    Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
 }
 Add-AppxPackage .\Ubuntu.appx
 
@@ -113,11 +117,11 @@ wsl -l -v
 
 ```ps1
 if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
-    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v0.1.4331-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle' -OutFile 'Microsoft.DesktopAppInstaller.appxbundle'
+    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v0.1.42101-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle' -OutFile 'Microsoft.DesktopAppInstaller.appxbundle'
 }
-Add-AppxPackage -path Microsoft.DesktopAppInstaller.appxbundle
+Add-AppxPackage -path .\Microsoft.DesktopAppInstaller.appxbundle
 
-winget install Terminal
+winget install -e --id Microsoft.WindowsTerminal
 
 winget install -e --id Git.Git
 
