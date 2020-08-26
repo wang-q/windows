@@ -6,7 +6,7 @@ Select `Desktop development with C++` and Language packs English/Chinese
 
 ## [`rustup`](https://rustup.rs/)
 
-```ps1
+```powershell
 # rustup
 rustup self update
 rustup update
@@ -28,7 +28,7 @@ cargo install intspan
 
 * vscode extensions
 
-```ps1
+```powershell
 code --install-extension rust-lang.rust
 
 ```
@@ -37,7 +37,7 @@ code --install-extension rust-lang.rust
 
 * Install vcpkg. Open PowerShell as an Administrator
 
-```ps1
+```powershell
 scoop install -g cmake
 
 cd c:/
@@ -58,7 +58,7 @@ cd c:/vcpkg
 
 * Install some packages
 
-```ps1
+```powershell
 vcpkg install zlib curl sqlite3
 
 ```

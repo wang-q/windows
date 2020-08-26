@@ -4,7 +4,7 @@
 
 * Install `Scoop`
 
-```ps1
+```powershell
 set-executionpolicy remotesigned -s currentuser
 iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
 
@@ -16,7 +16,7 @@ sudo scoop install -g 7zip git openssh
 
 * Satisfy `scoop checkup`
 
-```ps1
+```powershell
 sudo Add-MpPreference -ExclusionPath $HOME\scoop
 sudo Add-MpPreference -ExclusionPath 'C:\ProgramData\scoop'
 sudo Set-ItemProperty 'HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem' -Name 'LongPathsEnabled' -Value 1
@@ -30,7 +30,7 @@ Close the powershell window and start a new one to refresh environment variables
 
 ## Install packages
 
-```ps1
+```powershell
 scoop install curl wget gzip grep
 
 scoop bucket add extras
@@ -39,14 +39,14 @@ scoop bucket add extras
 
 * Development packages
 
-```ps1
+```powershell
 sudo scoop install -g vcredist
 
 ```
 
 * GUI packages
 
-```ps1
+```powershell
 # utils
 scoop install windirstat
 
@@ -62,7 +62,7 @@ scoop install notable
 
 * List installed packages
 
-```ps1
+```powershell
 scoop list
 
 ```

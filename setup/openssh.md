@@ -9,7 +9,7 @@ So use the old way.
 * [Ref 1](https://github.com/PowerShell/Win32-OpenSSH/wiki/Install-Win32-OpenSSH)
 * [Ref 2](http://chrisarges.net/2019/07/16/openssh-install-on-windows.html)
 
-```ps1
+```powershell
 if (!(Test-Path OpenSSH-Win64.zip -PathType Leaf)) {
     Invoke-WebRequest 'https://github.com/PowerShell/Win32-OpenSSH/releases/download/v8.1.0.0p1-Beta/OpenSSH-Win64.zip' -OutFile 'OpenSSH-Win64.zip'
 }

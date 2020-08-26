@@ -7,7 +7,7 @@
   - [Install, active and update Windows](#install-active-and-update-windows)
   - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
   - [WSL 2](#wsl-2)
-  - [Ubuntu 18.04](#ubuntu-1804)
+  - [Ubuntu 20.04](#ubuntu-2004)
   - [Install `winget` and `Windows Terminal`](#install-winget-and-windows-terminal)
   - [Optional: Adjusting Windows](#optional-adjusting-windows)
   - [Optional: winget-pkgs](#optional-winget-pkgs)
@@ -21,14 +21,15 @@ Most following commands should be pasted to `Powershell`.
 
 ## Get ISO
 
-Some features of Windows 10 (20H1/2004) are needed here, so download [Windows 10 Enterprise VL Insider
-Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) first:
+Some features of Windows 10 20H1/2004 are needed here
 
-* Build 19041.84
+* Build 19041.84 or later
 * English or Chinese Simplified
 * 64-bit
 
-Or use the following link:
+So download [Windows 10 Enterprise VL Insider
+Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) or use the following
+link:
 
 * <ed2k://|file|cn_windows_10_business_editions_version_2004_updated_july_2020_x64_dvd_f4ed1845.iso|5207683072|AD9E2EA63E25E84243B8034BE2BAAB17|/>
 
@@ -40,7 +41,7 @@ Or use the following link:
 
 * Update Windows and then check system info
 
-```ps1
+```powershell
 # simple
 winver
 
@@ -57,7 +58,7 @@ After Windows updating, Windows version is 19041.388 as my current date.
 
 * Open PowerShell as an Administrator
 
-```ps1
+```powershell
 # .Net 2.5 and 3
 DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:D:\sources\sxs
 
@@ -72,7 +73,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All
 
 * Open PowerShell as an Administrator
 
-```ps1
+```powershell
 # WSL
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
@@ -86,16 +87,16 @@ necessarily.
 
 Restart, then set WSL 2 as default.
 
-```ps1
+```powershell
 wsl --set-default-version 2
 
 ```
 
-## Ubuntu 18.04
+## Ubuntu 20.04
 
 Search `bash` in Microsoft Store or use the following command lines.
 
-```ps1
+```powershell
 if (!(Test-Path Ubuntu.appx -PathType Leaf)) {
     Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
 }
@@ -108,14 +109,14 @@ and set up a new Linux user account.
 
 The following command verifies the status of WSL:
 
-```ps1
+```powershell
 wsl -l -v
 
 ```
 
 ## Install `winget` and `Windows Terminal`
 
-```ps1
+```powershell
 if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
     Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v0.1.42101-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle' -OutFile 'Microsoft.DesktopAppInstaller.appxbundle'
 }
@@ -129,7 +130,7 @@ winget install -e --id Git.Git
 
 ## Optional: Adjusting Windows
 
-```ps1
+```powershell
 mkdir -p ~/Scripts
 cd ~/Scripts
 git clone --recursive https://github.com/wang-q/windows
@@ -143,7 +144,7 @@ Get updates from Microsoft Store.
 
 ## Optional: winget-pkgs
 
-```ps1
+```powershell
 # programming
 winget install AdoptOpenJDK.OpenJDK
 winget install Python.Python
@@ -156,7 +157,7 @@ winget install Bandizip
 winget install Rufus
 winget install QuickLook
 
-# develpment
+# development
 winget install 'GitHub Desktop'
 winget install WinSCP
 winget install vscode
