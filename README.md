@@ -165,7 +165,7 @@ winget install 'Beyond Compare 4'
 
 # GUI
 winget install Firefox
-winget install 'Adobe Acrobat Reader DC'
+#winget install 'Adobe Acrobat Reader DC'
 
 ```
 

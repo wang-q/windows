@@ -53,7 +53,6 @@ scoop install windirstat
 # media
 scoop install mpv-git
 sudo ~\scoop\apps\mpv-git\current\installer\mpv-install.bat
-scoop install handbrake
 
 # others
 scoop install notable
