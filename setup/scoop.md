@@ -26,7 +26,7 @@ scoop install aria2 dark innounp
 
 Scoop can utilize aria2 to use multi-connection downloads.
 
-Close the powershell window and start a new one to refresh environment variables.
+Close the powershell window and start a new one to refresh the environment variables.
 
 ## Install packages
 

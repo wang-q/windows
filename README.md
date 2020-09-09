@@ -21,7 +21,7 @@ Most following commands should be pasted to `Powershell`.
 
 ## Get ISO
 
-Some features of Windows 10 20H1/2004 are needed here
+Some features of Windows 10 20H1/2004 are needed here.
 
 * Build 19041.84 or later
 * English or Chinese Simplified
@@ -50,7 +50,7 @@ systeminfo
 
 ```
 
-After Windows updating, Windows version is 19041.388 as my current date.
+After Windows updating, the Windows version is 19041.388 as my current date.
 
 ## Enable some optional features of Windows 10
 
@@ -85,7 +85,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 Update the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
 necessarily.
 
-Restart, then set WSL 2 as default.
+Restart then set WSL 2 as default.
 
 ```powershell
 wsl --set-default-version 2
@@ -184,7 +184,7 @@ winget install Firefox
 
 ## Directory Organization
 
-* [`packer/`](packer/): Scirpts for building a Windows 10 box for Parallels.
+* [`packer/`](packer/): Scripts for building a Windows 10 box for Parallels.
 
-* [`setup/`](setup/): Scirpts for setting-up Windows.
+* [`setup/`](setup/): Scripts for setting-up Windows.
 
