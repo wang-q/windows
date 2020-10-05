@@ -42,6 +42,8 @@ scoop bucket add extras
 ```powershell
 sudo scoop install -g vcredist
 
+scoop install ripgrep
+
 ```
 
 * GUI packages
@@ -55,7 +57,7 @@ scoop install mpv-git
 sudo ~\scoop\apps\mpv-git\current\installer\mpv-install.bat
 
 # others
-scoop install notable
+#scoop install notable
 
 ```
 
