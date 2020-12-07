@@ -29,3 +29,13 @@ sudo Set-Service sshd -StartupType Automatic
 
 There is a bug when transfer [large files](https://github.com/PowerShell/Win32-OpenSSH/issues/1395)
 via sftp to Windows, be careful.
+
+# Optional: ssh-copy-id
+
+
+```powershell
+ssh-keygen -f $env:USERPROFILE/.ssh/id_rsa
+
+type $env:USERPROFILE/.ssh/id_rsa.pub | ssh wangq@202.119.37.251 "cat >> .ssh/authorized_keys"
+
+```
