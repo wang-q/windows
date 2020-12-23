@@ -147,8 +147,10 @@ Get updates from Microsoft Store.
 ```powershell
 # programming
 winget install AdoptOpenJDK.OpenJDK
-winget install Python.Python
-winget install 'Strawberry Perl'
+winget install -e --id StrawberryPerl.StrawberryPerl
+winget install -e --id Python.Python
+winget install -e --id RProject.R
+winget install -e --id RStudio.RStudio
 winget install cmake
 
 # utils
