@@ -49,9 +49,6 @@ scoop install ripgrep
 * GUI packages
 
 ```powershell
-# utils
-scoop install windirstat
-
 # media
 scoop install mpv-git
 sudo ~\scoop\apps\mpv-git\current\installer\mpv-install.bat
