@@ -154,10 +154,11 @@ winget install -e --id RStudio.RStudio
 winget install cmake
 
 # utils
-winget install everything
-winget install Bandizip
-winget install Rufus
-winget install QuickLook
+winget install -e --id voidtools.Everything
+winget install -e --id Bandisoft.Bandizip
+winget install -e --id Rufus.Rufus
+winget install -e --id QL-Win.QuickLook
+winget install -e --id AntibodySoftware.WizTree
 
 # development
 winget install 'GitHub Desktop'
