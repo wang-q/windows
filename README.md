@@ -147,6 +147,7 @@ Get updates from Microsoft Store.
 ```powershell
 # programming
 winget install AdoptOpenJDK.OpenJDK
+winget install -e --id Microsoft.dotnet
 winget install -e --id StrawberryPerl.StrawberryPerl
 winget install -e --id Python.Python
 winget install -e --id RProject.R
@@ -159,6 +160,7 @@ winget install -e --id Bandisoft.Bandizip
 winget install -e --id Rufus.Rufus
 winget install -e --id QL-Win.QuickLook
 winget install -e --id AntibodySoftware.WizTree
+winget install -e --id thehandbraketeam.handbrake
 
 # development
 winget install 'GitHub Desktop'
