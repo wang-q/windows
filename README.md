@@ -146,13 +146,20 @@ Get updates from Microsoft Store.
 
 ```powershell
 # programming
-winget install AdoptOpenJDK.OpenJDK
+winget install -e --id AdoptOpenJDK.OpenJDK
 winget install -e --id Microsoft.dotnet
 winget install -e --id StrawberryPerl.StrawberryPerl
 winget install -e --id Python.Python
 winget install -e --id RProject.R
 winget install -e --id RStudio.RStudio
-winget install cmake
+winget install -e --id Kitware.CMake
+
+# development
+winget install -e --id GitHub.GitHubDesktop
+winget install -e --id WinSCP.WinSCP
+winget install -e --id Microsoft.VisualStudioCode
+winget install -e --id ScooterSoftware.BeyondCompare4
+winget install -e --id JetBrains.Toolbox
 
 # utils
 winget install -e --id voidtools.Everything
@@ -161,16 +168,17 @@ winget install -e --id Rufus.Rufus
 winget install -e --id QL-Win.QuickLook
 winget install -e --id AntibodySoftware.WizTree
 winget install -e --id thehandbraketeam.handbrake
+winget install -e --id Microsoft.PowerToys
+winget install -e --id qBittorrent.qBittorrent
 
-# development
-winget install 'GitHub Desktop'
-winget install WinSCP
-winget install vscode
-winget install 'Beyond Compare 4'
-
-# GUI
-winget install Firefox
-#winget install 'Adobe Acrobat Reader DC'
+# apps
+winget install -e --id Mozilla.Firefox
+winget install -e --id Tencent.WeChat
+winget install -e --id Tencent.TencentMeeting
+winget install -e --id Tencent.QQ
+winget install -e --id Netease.CloudMusic
+winget install -e --id Youdao.YoudaoDict
+# winget install -e --id Adobe.AdobeAcrobatReaderDC
 
 ```
 
