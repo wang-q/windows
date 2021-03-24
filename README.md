@@ -31,7 +31,8 @@ So download [Windows 10 Enterprise VL Insider
 Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) or use the following
 link:
 
-* <ed2k://|file|cn_windows_10_business_editions_version_2004_updated_july_2020_x64_dvd_f4ed1845.iso|5207683072|AD9E2EA63E25E84243B8034BE2BAAB17|/>
+* <ed2k://|file|cn_windows_10_business_editions_version_20h2_updated_feb_2021_x64_dvd_be28e70d.iso|6060609536|6EE4C60193418417843D7A2F4518C9D7|/>
+* <magnet:?xt=urn:btih:D4088008828F2B7D95B3546D32C641B736001AF5&dn=cn_windows_10_business_editions_version_20h2_updated_feb_2021_x64_dvd_be28e70d.iso&xl=6060609536>
 
 ## Install, active and update Windows
 
