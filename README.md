@@ -51,7 +51,7 @@ systeminfo
 
 ```
 
-After Windows updating, the Windows version is 19041.388 as my current date.
+After Windows updating, the Windows version is 19042.804 as my current date.
 
 ## Enable some optional features of Windows 10
 
@@ -119,7 +119,7 @@ wsl -l -v
 
 ```powershell
 if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
-    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v0.2.2941-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle' -OutFile 'Microsoft.DesktopAppInstaller.appxbundle'
+    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v-0.2.10191-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle' -OutFile 'Microsoft.DesktopAppInstaller.appxbundle'
 }
 Add-AppxPackage -path .\Microsoft.DesktopAppInstaller.appxbundle
 
