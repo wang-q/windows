@@ -119,9 +119,11 @@ wsl -l -v
 
 ```powershell
 if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
-    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v-0.2.10191-preview/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.appxbundle' -OutFile 'Microsoft.DesktopAppInstaller.appxbundle'
+    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v1.0.11692/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.DesktopAppInstaller.msixbundle'
 }
-Add-AppxPackage -path .\Microsoft.DesktopAppInstaller.appxbundle
+Add-AppxPackage -path .\Microsoft.DesktopAppInstaller.msixbundle
+
+winget --version
 
 winget install -e --id Microsoft.WindowsTerminal
 
