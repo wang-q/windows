@@ -66,6 +66,9 @@ DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:D:\so
 # SMB 1
 Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All
 
+# Telnet
+dism /online /Enable-Feature /FeatureName:TelnetClient
+
 ```
 
 ## WSL 2
