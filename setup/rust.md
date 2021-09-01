@@ -4,6 +4,10 @@
 
 Select `Desktop development with C++` and Language packs English/Chinese
 
+## docs from Microsoft
+
+https://docs.microsoft.com/en-us/windows/dev-environment/rust/setup
+
 ## [`rustup`](https://rustup.rs/)
 
 ```powershell
@@ -29,8 +33,9 @@ cargo install intspan
 * vscode extensions
 
 ```powershell
-code --install-extension rust-lang.rust
-
+# code --install-extension rust-lang.rust
+code --install-extension matklad.rust-analyzer
+code --install-extension bungcip.better-toml
 ```
 
 ## [`vcpkg`](https://github.com/microsoft/vcpkg)
