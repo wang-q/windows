@@ -184,6 +184,7 @@ winget install -e --id Tencent.TencentMeeting
 winget install -e --id Tencent.QQ
 winget install -e --id Netease.CloudMusic
 winget install -e --id Youdao.YoudaoDict
+winget install -e --id stax76.mpvdotnet
 # winget install -e --id Adobe.AdobeAcrobatReaderDC
 # winget install -e --id Alibaba.DingTalk
 
