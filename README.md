@@ -27,12 +27,17 @@ Some features of Windows 10 20H1/2004 are needed here.
 * English or Chinese Simplified
 * 64-bit
 
-So download [Windows 10 Enterprise VL Insider
+Download [Windows 10 Enterprise VL Insider
 Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) or use the following
 link:
 
-* <ed2k://|file|cn_windows_10_business_editions_version_20h2_updated_feb_2021_x64_dvd_be28e70d.iso|6060609536|6EE4C60193418417843D7A2F4518C9D7|/>
-* <magnet:?xt=urn:btih:D4088008828F2B7D95B3546D32C641B736001AF5&dn=cn_windows_10_business_editions_version_20h2_updated_feb_2021_x64_dvd_be28e70d.iso&xl=6060609536>
+* Windows 10
+  * <ed2k://|file|zh-cn_windows_10_business_editions_version_21h1_updated_sep_2021_x64_dvd_023d42d3.iso|5709488128|B09B1BA01F76C80E2BD8E798C9E89E7D|/>
+  * <magnet:?xt=urn:btih:5C66F9BE1E46D0D4F7EC418D54C3A3FB03679D6D&dn=zh-cn_windows_10_business_editions_version_21h1_updated_sep_2021_x64_dvd_023d42d3.iso&xl=5709488128>
+
+* Windows 11
+  * <ed2k://|file|zh-cn_windows_11_business_editions_version_21h2_updated_october_2021_x64_dvd_a84e149f.iso|5419143168|B0C4BE7271CD65B2173326239D4F8BA2|/>
+  * <magnet:?xt=urn:btih:98BB0A1703D5E36ADCE9BAAA1E02D86C29C4DF95&dn=zh-cn_windows_11_business_editions_version_21h2_updated_october_2021_x64_dvd_a84e149f.iso&xl=5419143168>
 
 ## Install, active and update Windows
 
@@ -62,6 +67,9 @@ After Windows updating, the Windows version is 19042.804 as my current date.
 ```powershell
 # .Net 2.5 and 3
 DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:D:\sources\sxs
+
+# Online
+# DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
 
 # SMB 1
 Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All
@@ -122,7 +130,7 @@ wsl -l -v
 
 ```powershell
 if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
-    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v1.0.11692/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.DesktopAppInstaller.msixbundle'
+    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v1.1.12653/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.DesktopAppInstaller.msixbundle'
 }
 Add-AppxPackage -path .\Microsoft.DesktopAppInstaller.msixbundle
 
@@ -130,11 +138,23 @@ winget --version
 
 winget install -e --id Microsoft.WindowsTerminal
 
+winget install -e --id Microsoft.PowerShell
+
 winget install -e --id Git.Git
 
 ```
 
+Open `Windows Terminal`
+
+* Set `Settings` -> `Startup` -> `Default profile` to `PowerShell`, not `Windows PowerShell`.
+
+* Set `Default terminal application` to `Windows Terminal`.
+
+* Hide unneeded `Profiles`.
+
 ## Optional: Adjusting Windows
+
+Works with Windows 10 or 11.
 
 ```powershell
 mkdir -p ~/Scripts
@@ -199,9 +219,33 @@ winget install -e --id stax76.mpvdotnet
 * [`scoop.md`](setup/scoop.md)
 * [`msys2.md`](setup/msys2.md)
 
+
 ## Optional: Rust and C/C++
 
 * [`rust.md`](setup/rust.md)
+
+## Optional: QuickLook Plugins
+
+<https://github.com/QL-Win/QuickLook/wiki/Available-Plugins>
+
+```powershell
+# epub
+$url=(
+  curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.EpubViewer/releases/latest |
+          jq -r '.assets[0].browser_download_url'
+)
+curl.exe -LO $url
+
+# office
+$url=(
+  curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.OfficeViewer/releases/latest |
+          jq -r '.assets[0].browser_download_url'
+)
+curl.exe -LO $url
+
+```
+
+Select the `qlplugin` file and press `Spacebar` to install the plugin.
 
 ## Directory Organization
 
