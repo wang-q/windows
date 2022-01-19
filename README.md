@@ -187,6 +187,8 @@ winget install -e --id Microsoft.VisualStudioCode
 winget install -e --id ScooterSoftware.BeyondCompare4
 winget install -e --id JetBrains.Toolbox
 
+winget install -e --id Docker.DockerDesktop
+
 # utils
 winget install -e --id voidtools.Everything
 winget install -e --id Bandisoft.Bandizip
