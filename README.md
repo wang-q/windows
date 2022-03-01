@@ -173,6 +173,7 @@ Get updates from Microsoft Store.
 ```powershell
 # programming
 winget install -e --id AdoptOpenJDK.OpenJDK
+winget install -e --id Oracle.JavaRuntimeEnvironment
 winget install -e --id Microsoft.dotnet
 winget install -e --id StrawberryPerl.StrawberryPerl
 winget install -e --id Python.Python
