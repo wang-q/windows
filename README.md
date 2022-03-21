@@ -178,6 +178,7 @@ winget install -e --id Microsoft.dotnet
 winget install -e --id StrawberryPerl.StrawberryPerl
 winget install -e --id Python.Python
 winget install -e --id RProject.R
+winget install -e --id RProject.Rtools
 winget install -e --id OpenJS.NodeJS.LTS
 winget install -e --id RStudio.RStudio.OpenSource
 winget install -e --id Kitware.CMake

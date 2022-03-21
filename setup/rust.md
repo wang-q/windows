@@ -43,7 +43,7 @@ code --install-extension bungcip.better-toml
 * Install vcpkg. Open PowerShell as an Administrator
 
 ```powershell
-scoop install -g cmake
+scoop install cmake
 
 cd c:/
 git clone https://github.com/Microsoft/vcpkg.git
