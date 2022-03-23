@@ -3,19 +3,18 @@
 [TOC levels=1-3]: # ""
 
 - [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-10)
-  - [Get ISO](#get-iso)
-  - [Install, active and update Windows](#install-active-and-update-windows)
-  - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
-  - [WSL 2](#wsl-2)
-  - [Ubuntu 20.04](#ubuntu-2004)
-  - [Install `winget` and `Windows Terminal`](#install-winget-and-windows-terminal)
-  - [Optional: Adjusting Windows](#optional-adjusting-windows)
-  - [Optional: winget-pkgs](#optional-winget-pkgs)
-  - [Optional: Windows 7 games](#optional-windows-7-games)
-  - [Optional: Packages Managements](#optional-packages-managements)
-  - [Optional: Rust and C/C++](#optional-rust-and-cc)
-  - [Directory Organization](#directory-organization)
-
+    - [Get ISO](#get-iso)
+    - [Install, active and update Windows](#install-active-and-update-windows)
+    - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
+    - [WSL 2](#wsl-2)
+    - [Ubuntu 20.04](#ubuntu-2004)
+    - [Install `winget` and `Windows Terminal`](#install-winget-and-windows-terminal)
+    - [Optional: Adjusting Windows](#optional-adjusting-windows)
+    - [Optional: winget-pkgs](#optional-winget-pkgs)
+    - [Optional: Windows 7 games](#optional-windows-7-games)
+    - [Optional: Packages Managements](#optional-packages-managements)
+    - [Optional: Rust and C/C++](#optional-rust-and-cc)
+    - [Directory Organization](#directory-organization)
 
 Most following commands should be pasted to `Powershell`.
 
@@ -27,17 +26,15 @@ Some features of Windows 10 20H1/2004 are needed here.
 * English or Chinese Simplified
 * 64-bit
 
-Download [Windows 10 Enterprise VL Insider
-Preview](https://docs.microsoft.com/en-us/windows-insider/flight-hub/) or use the following
-link:
-
 * Windows 10
-  * <ed2k://|file|zh-cn_windows_10_business_editions_version_21h1_updated_sep_2021_x64_dvd_023d42d3.iso|5709488128|B09B1BA01F76C80E2BD8E798C9E89E7D|/>
-  * <magnet:?xt=urn:btih:5C66F9BE1E46D0D4F7EC418D54C3A3FB03679D6D&dn=zh-cn_windows_10_business_editions_version_21h1_updated_sep_2021_x64_dvd_023d42d3.iso&xl=5709488128>
+    * <ed2k:
+      //|file|zh-cn_windows_10_business_editions_version_21h1_updated_sep_2021_x64_dvd_023d42d3.iso|5709488128|B09B1BA01F76C80E2BD8E798C9E89E7D|/>
+    * <magnet:?xt=urn:btih:5C66F9BE1E46D0D4F7EC418D54C3A3FB03679D6D&dn=zh-cn_windows_10_business_editions_version_21h1_updated_sep_2021_x64_dvd_023d42d3.iso&xl=5709488128>
 
 * Windows 11
-  * <ed2k://|file|zh-cn_windows_11_business_editions_version_21h2_updated_october_2021_x64_dvd_a84e149f.iso|5419143168|B0C4BE7271CD65B2173326239D4F8BA2|/>
-  * <magnet:?xt=urn:btih:98BB0A1703D5E36ADCE9BAAA1E02D86C29C4DF95&dn=zh-cn_windows_11_business_editions_version_21h2_updated_october_2021_x64_dvd_a84e149f.iso&xl=5419143168>
+    * <ed2k:
+      //|file|zh-cn_windows_11_business_editions_version_21h2_updated_october_2021_x64_dvd_a84e149f.iso|5419143168|B0C4BE7271CD65B2173326239D4F8BA2|/>
+    * <magnet:?xt=urn:btih:98BB0A1703D5E36ADCE9BAAA1E02D86C29C4DF95&dn=zh-cn_windows_11_business_editions_version_21h2_updated_october_2021_x64_dvd_a84e149f.iso&xl=5419143168>
 
 ## Install, active and update Windows
 
@@ -69,13 +66,13 @@ After Windows updating, the Windows version is 19042.804 as my current date.
 DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:D:\sources\sxs
 
 # Online
-# DISM /Online /Enable-Feature /FeatureName:NetFx3 /All 
+# DISM /Online /Enable-Feature /FeatureName:NetFx3 /All
 
 # SMB 1
 Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All
 
 # Telnet
-dism /online /Enable-Feature /FeatureName:TelnetClient
+DISM /Online /Enable-Feature /FeatureName:TelnetClient
 
 ```
 
@@ -109,7 +106,8 @@ wsl --set-default-version 2
 Search `bash` in Microsoft Store or use the following command lines.
 
 ```powershell
-if (!(Test-Path Ubuntu.appx -PathType Leaf)) {
+if (!(Test-Path Ubuntu.appx -PathType Leaf))
+{
     Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
 }
 Add-AppxPackage .\Ubuntu.appx
@@ -129,8 +127,11 @@ wsl -l -v
 ## Install `winget` and `Windows Terminal`
 
 ```powershell
-if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf)) {
-    Invoke-WebRequest 'https://github.com/microsoft/winget-cli/releases/download/v1.1.12653/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle' -OutFile 'Microsoft.DesktopAppInstaller.msixbundle'
+if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf))
+{
+    Invoke-WebRequest `
+        'https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle' `
+        -OutFile 'Microsoft.DesktopAppInstaller.msixbundle'
 }
 Add-AppxPackage -path .\Microsoft.DesktopAppInstaller.msixbundle
 
@@ -162,7 +163,10 @@ cd ~/Scripts
 git clone --recursive https://github.com/wang-q/windows
 
 cd ~/Scripts/windows/setup
-powershell.exe -NoProfile -ExecutionPolicy Bypass -File "Win10-Initial-Setup-Script/Win10.ps1" -include "Win10-Initial-Setup-Script/Win10.psm1" -preset "Default.preset"
+powershell.exe -NoProfile -ExecutionPolicy Bypass `
+    -File "Win10-Initial-Setup-Script/Win10.ps1" `
+    -include "Win10-Initial-Setup-Script/Win10.psm1" `
+    -preset "Default.preset"
 
 ```
 
@@ -226,7 +230,6 @@ winget install -e --id Zotero.Zotero
 * [`scoop.md`](setup/scoop.md)
 * [`msys2.md`](setup/msys2.md)
 
-
 ## Optional: Rust and C/C++
 
 * [`rust.md`](setup/rust.md)
@@ -237,16 +240,16 @@ winget install -e --id Zotero.Zotero
 
 ```powershell
 # epub
-$url=(
-  curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.EpubViewer/releases/latest |
-          jq -r '.assets[0].browser_download_url'
+$url = (
+curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.EpubViewer/releases/latest |
+    jq -r '.assets[0].browser_download_url'
 )
 curl.exe -LO $url
 
 # office
-$url=(
-  curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.OfficeViewer/releases/latest |
-          jq -r '.assets[0].browser_download_url'
+$url = (
+curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.OfficeViewer/releases/latest |
+    jq -r '.assets[0].browser_download_url'
 )
 curl.exe -LO $url
 
