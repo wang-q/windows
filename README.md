@@ -83,11 +83,11 @@ DISM /Online /Enable-Feature /FeatureName:TelnetClient
 * Open PowerShell as an Administrator
 
 ```powershell
-# WSL
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-
 # HyperV
-Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
+
+# WSL
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
 
 ```
 
