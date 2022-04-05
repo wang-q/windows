@@ -194,7 +194,9 @@ winget install -e --id Microsoft.VisualStudioCode
 winget install -e --id ScooterSoftware.BeyondCompare4
 winget install -e --id JetBrains.Toolbox
 
-winget install -e --id Docker.DockerDesktop
+# winget install -e --id Docker.DockerDesktop
+
+# winget install -e --id VMware.WorkstationPlayer
 
 # utils
 winget install -e --id voidtools.Everything
@@ -202,7 +204,7 @@ winget install -e --id Bandisoft.Bandizip
 winget install -e --id Rufus.Rufus
 winget install -e --id QL-Win.QuickLook
 winget install -e --id AntibodySoftware.WizTree
-winget install -e --id thehandbraketeam.handbrake
+winget install -e --id HandBrake.HandBrake
 winget install -e --id Microsoft.PowerToys
 winget install -e --id qBittorrent.qBittorrent
 
