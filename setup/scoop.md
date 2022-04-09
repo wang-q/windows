@@ -22,11 +22,13 @@ Close the powershell window and start a new one to refresh the environment varia
 
 ```powershell
 scoop install curl wget gzip grep
-scoop install jq
+scoop install jq pandoc
 
 scoop bucket add extras
 
-scoop install ripgrep
+scoop install bat ripgrep tokei
+
+scoop install proxychains
 
 ```
 
