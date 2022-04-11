@@ -236,6 +236,43 @@ winget install -e --id Zotero.Zotero
 
 * [`rust.md`](setup/rust.md)
 
+## Optional: sysinternals
+
+* Add `$HOME/bin` to Path
+* Open PowerShell as an Administrator
+
+```powershell
+mkdir $HOME/bin
+
+# Add to Path
+[Environment]::SetEnvironmentVariable(
+    "Path",
+    [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine) + ";$HOME\bin",
+    [EnvironmentVariableTarget]::Machine)
+
+```
+
+* Download and extract
+
+```powershell
+scoop install unzip
+
+$array = "DU", "ProcessExplorer", "ProcessMonitor", "RAMMap"
+
+foreach ($app in $array) {
+    aria2c.exe -c "https://download.sysinternals.com/files/$app.zip"
+}
+
+foreach ($app in $array) {
+    unzip "$app.zip" -d $HOME/bin -x Eula.txt
+}
+
+rm $HOME/bin/*.chm
+rm $HOME/bin/*64.exe
+rm $HOME/bin/*64a.exe
+
+```
+
 ## Optional: QuickLook Plugins
 
 <https://github.com/QL-Win/QuickLook/wiki/Available-Plugins>
