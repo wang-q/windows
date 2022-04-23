@@ -193,6 +193,7 @@ winget install -e --id WinSCP.WinSCP
 winget install -e --id Microsoft.VisualStudioCode
 winget install -e --id ScooterSoftware.BeyondCompare4
 winget install -e --id JetBrains.Toolbox
+winget install -e --id Clement.bottom
 # winget install -e --id WinFsp.WinFsp
 # winget install -e --id SSHFS-Win.SSHFS-Win
 # \\sshfs\REMUSER@HOST[\PATH]
