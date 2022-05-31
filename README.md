@@ -176,24 +176,25 @@ Get updates from Microsoft Store.
 
 ```powershell
 # programming
-winget install -e --id AdoptOpenJDK.OpenJDK
-winget install -e --id Oracle.JavaRuntimeEnvironment
-winget install -e --id Microsoft.dotnet
-winget install -e --id StrawberryPerl.StrawberryPerl
-winget install -e --id Python.Python
-winget install -e --id RProject.R
-winget install -e --id RProject.Rtools
-winget install -e --id OpenJS.NodeJS.LTS
-winget install -e --id RStudio.RStudio.OpenSource
-winget install -e --id Kitware.CMake
+# winget install -s winget -e --id AdoptOpenJDK.OpenJDK
+winget install -s winget -e --id Oracle.JavaRuntimeEnvironment
+winget install -s winget -e --id Oracle.JDK.18
+# winget install -s winget -e --id Microsoft.dotnet
+winget install -s winget -e --id StrawberryPerl.StrawberryPerl
+# winget install -e --id Python.Python
+winget install -s winget -e --id RProject.R
+# winget install -s winget -e --id RProject.Rtools
+# winget install -s winget-e --id OpenJS.NodeJS.LTS
+winget install -s winget -e --id RStudio.RStudio.OpenSource
+winget install -s winget -e --id Kitware.CMake
 
 # development
-winget install -e --id GitHub.GitHubDesktop
-winget install -e --id WinSCP.WinSCP
-winget install -e --id Microsoft.VisualStudioCode
-winget install -e --id ScooterSoftware.BeyondCompare4
-winget install -e --id JetBrains.Toolbox
-winget install -e --id Clement.bottom
+winget install -s winget -e --id GitHub.GitHubDesktop
+winget install -s winget -e --id WinSCP.WinSCP
+winget install -s winget -e --id Microsoft.VisualStudioCode
+winget install -s winget -e --id ScooterSoftware.BeyondCompare4
+winget install -s winget -e --id JetBrains.Toolbox
+winget install -s winget -e --id Clement.bottom
 # winget install -e --id WinFsp.WinFsp
 # winget install -e --id SSHFS-Win.SSHFS-Win
 # \\sshfs\REMUSER@HOST[\PATH]
@@ -203,24 +204,24 @@ winget install -e --id Clement.bottom
 # winget install -e --id VMware.WorkstationPlayer
 
 # utils
-winget install -e --id voidtools.Everything
-winget install -e --id Bandisoft.Bandizip
-winget install -e --id Rufus.Rufus
-winget install -e --id QL-Win.QuickLook
-winget install -e --id AntibodySoftware.WizTree
-winget install -e --id HandBrake.HandBrake
-winget install -e --id Microsoft.PowerToys
-winget install -e --id qBittorrent.qBittorrent
+winget install -s winget -e --id voidtools.Everything
+winget install -s winget -e --id Bandisoft.Bandizip
+winget install -s winget -e --id Rufus.Rufus
+winget install -s winget -e --id QL-Win.QuickLook
+winget install -s winget -e --id AntibodySoftware.WizTree
+winget install -s winget -e --id HandBrake.HandBrake
+# winget install -s winget -e --id Microsoft.PowerToys
+winget install -s winget -e --id qBittorrent.qBittorrent
 
 # apps
-winget install -e --id Mozilla.Firefox
-winget install -e --id Tencent.WeChat
-winget install -e --id Tencent.TencentMeeting
-winget install -e --id Tencent.QQ
-winget install -e --id Netease.CloudMusic
-winget install -e --id Youdao.YoudaoDict
-winget install -e --id stax76.mpvdotnet
-winget install -e --id Zotero.Zotero
+winget install -s winget -e --id Mozilla.Firefox
+winget install -s winget -e --id Tencent.WeChat
+winget install -s winget -e --id Tencent.TencentMeeting
+winget install -s winget -e --id Tencent.QQ
+winget install -s winget -e --id Netease.CloudMusic
+winget install -s winget -e --id Youdao.YoudaoDict
+winget install -s winget -e --id stax76.mpvdotnet
+winget install -s winget -e --id Zotero.Zotero
 
 # winget install -e --id Adobe.AdobeAcrobatReaderDC
 # winget install -e --id Alibaba.DingTalk
