@@ -25,7 +25,6 @@ rustup component add clippy
 # others
 cargo install cargo-expand
 cargo install cargo-release
-cargo install hyperfine
 cargo install intspan
 
 ```
@@ -36,6 +35,7 @@ cargo install intspan
 # code --install-extension rust-lang.rust
 code --install-extension matklad.rust-analyzer
 code --install-extension bungcip.better-toml
+
 ```
 
 ## [`vcpkg`](https://github.com/microsoft/vcpkg)

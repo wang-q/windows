@@ -21,14 +21,16 @@ Close the powershell window and start a new one to refresh the environment varia
 ## Install packages
 
 ```powershell
-scoop install curl wget gzip grep
-scoop install jq pandoc
-
 scoop bucket add extras
 
-scoop install bat ripgrep tokei
+scoop install curl wget
+scoop install gzip unzip grep
+scoop install jq jid pandoc
 
-scoop install proxychains
+scoop install bat ripgrep tokei hyperfine
+scoop install sqlite sqlitestudio
+
+# scoop install proxychains
 
 ```
 
