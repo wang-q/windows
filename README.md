@@ -124,6 +124,31 @@ wsl -l -v
 
 ```
 
+### Symlinks
+
+* WSL: reduce the space occupied by virtual disks
+
+```shell
+cd
+
+rm -fr Script data
+
+ln -s /mnt/c/Users/wangq/Scripts/ ~/Scripts
+
+ln -s /mnt/d/data/ ~/data
+
+```
+
+* Windows: second disk
+    * Open `cmd.exe` as an Administrator
+
+```cmd
+cd c:\Users\wangq\
+
+mklink /D c:\Users\wangq\data d:\data
+
+```
+
 ## Install `winget` and `Windows Terminal`
 
 ```powershell
