@@ -195,7 +195,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass `
 
 ```
 
-Get updates from Microsoft Store.
+Log in to the Microsoft Store and get updates from there.
 
 ## Optional: winget-pkgs
 
@@ -231,7 +231,7 @@ winget install -s winget -e --id Clement.bottom
 # utils
 winget install -s winget -e --id voidtools.Everything
 winget install -s winget -e --id Bandisoft.Bandizip
-winget install -s winget -e --id Rufus.Rufus
+winget install -s msstore Rufus # need v3.18 or higher
 winget install -s winget -e --id QL-Win.QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
 winget install -s winget -e --id HandBrake.HandBrake
@@ -243,7 +243,7 @@ winget install -s winget -e --id Mozilla.Firefox
 winget install -s winget -e --id Tencent.WeChat
 winget install -s winget -e --id Tencent.TencentMeeting
 winget install -s winget -e --id Tencent.QQ
-winget install -s winget -e --id Netease.CloudMusic
+winget install -s winget -e --id NetEase.CloudMusic
 winget install -s winget -e --id Youdao.YoudaoDict
 winget install -s winget -e --id stax76.mpvdotnet
 winget install -s winget -e --id Zotero.Zotero
