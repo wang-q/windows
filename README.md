@@ -322,6 +322,13 @@ curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.OfficeViewer
 )
 curl.exe -LO $url
 
+# folder
+$url = (
+curl.exe -fsSL https://api.github.com/repos/adyanth/QuickLook.Plugin.FolderViewer/releases/latest |
+    jq -r '.assets[0].browser_download_url'
+)
+curl.exe -LO $url
+
 ```
 
 Select the `qlplugin` file and press `Spacebar` to install the plugin.
