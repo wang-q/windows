@@ -245,6 +245,7 @@ winget install -s winget -e --id Tencent.TencentMeeting
 winget install -s winget -e --id Tencent.QQ
 winget install -s winget -e --id NetEase.CloudMusic
 winget install -s winget -e --id Youdao.YoudaoDict
+winget install -s winget -e --id Baidu.BaiduNetdisk
 winget install -s winget -e --id stax76.mpvdotnet
 winget install -s winget -e --id Zotero.Zotero
 
