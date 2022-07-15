@@ -228,6 +228,8 @@ winget install -s winget -e --id Clement.bottom
 
 # winget install -e --id VMware.WorkstationPlayer
 
+winget install -s winget -e --id Canonical.Multipass
+
 # utils
 winget install -s winget -e --id voidtools.Everything
 winget install -s winget -e --id Bandisoft.Bandizip
