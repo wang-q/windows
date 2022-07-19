@@ -240,6 +240,7 @@ winget install -s winget -e --id AntibodySoftware.WizTree
 winget install -s winget -e --id HandBrake.HandBrake
 # winget install -s winget -e --id Microsoft.PowerToys
 winget install -s winget -e --id qBittorrent.qBittorrent
+winget install -s winget -e --id IrfanSkiljan.IrfanView
 
 # apps
 winget install -s winget -e --id Mozilla.Firefox
