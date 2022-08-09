@@ -226,10 +226,8 @@ winget install -s winget -e --id Clement.bottom
 # \\sshfs\REMUSER@HOST[\PATH]
 
 # winget install -e --id Docker.DockerDesktop
-
 # winget install -e --id VMware.WorkstationPlayer
-
-winget install -s winget -e --id Canonical.Multipass
+# winget install -s winget -e --id Canonical.Multipass
 
 # utils
 winget install -s winget -e --id voidtools.Everything
