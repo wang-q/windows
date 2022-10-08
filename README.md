@@ -293,7 +293,7 @@ scoop install unzip
 $array = "DU", "ProcessExplorer", "ProcessMonitor", "RAMMap"
 
 foreach ($app in $array) {
-    aria2c.exe -c "https://download.sysinternals.com/files/$app.zip"
+    iwr "https://download.sysinternals.com/files/$app.zip" -O "$app.zip"
 }
 
 foreach ($app in $array) {
@@ -313,21 +313,24 @@ rm $HOME/bin/*64a.exe
 ```powershell
 # epub
 $url = (
-curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.EpubViewer/releases/latest |
+iwr https://api.github.com/repos/QL-Win/QuickLook.Plugin.EpubViewer/releases/latest |
+    Select-Object -Expand Content |
     jq -r '.assets[0].browser_download_url'
 )
 curl.exe -LO $url
 
 # office
 $url = (
-curl.exe -fsSL https://api.github.com/repos/QL-Win/QuickLook.Plugin.OfficeViewer/releases/latest |
+iwr https://api.github.com/repos/QL-Win/QuickLook.Plugin.OfficeViewer/releases/latest |
+    Select-Object -Expand Content |
     jq -r '.assets[0].browser_download_url'
 )
 curl.exe -LO $url
 
 # folder
 $url = (
-curl.exe -fsSL https://api.github.com/repos/adyanth/QuickLook.Plugin.FolderViewer/releases/latest |
+iwr https://api.github.com/repos/adyanth/QuickLook.Plugin.FolderViewer/releases/latest |
+    Select-Object -Expand Content |
     jq -r '.assets[0].browser_download_url'
 )
 curl.exe -LO $url
