@@ -236,7 +236,7 @@ winget install -s msstore Rufus # need v3.18 or higher
 winget install -s winget -e --id QL-Win.QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
 winget install -s winget -e --id HandBrake.HandBrake
-# winget install -s winget -e --id Microsoft.PowerToys
+winget install -s winget -e --id Microsoft.PowerToys
 winget install -s winget -e --id qBittorrent.qBittorrent
 winget install -s winget -e --id IrfanSkiljan.IrfanView
 
@@ -248,9 +248,9 @@ winget install -s winget -e --id Tencent.QQ
 winget install -s winget -e --id NetEase.CloudMusic
 winget install -s winget -e --id Youdao.YoudaoDict
 winget install -s winget -e --id Baidu.BaiduNetdisk
-winget install -s winget -e --id stax76.mpvdotnet
 winget install -s winget -e --id Zotero.Zotero
-
+winget install -s msstore mpv.net
+winget install -s msstore "iQIYI Windows client app"
 # winget install -e --id Adobe.AdobeAcrobatReaderDC
 # winget install -e --id Alibaba.DingTalk
 
