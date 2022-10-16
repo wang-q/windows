@@ -177,6 +177,8 @@ Open `Windows Terminal`
 
 * Set `Default terminal application` to `Windows Terminal`.
 
+* Set `Interaction` -> `Remove trailing white-space when pasting` to Off
+
 * Hide unneeded `Profiles`.
 
 ## Optional: Adjusting Windows
@@ -245,6 +247,7 @@ winget install -s winget -e --id Mozilla.Firefox
 winget install -s winget -e --id Tencent.WeChat
 winget install -s winget -e --id Tencent.TencentMeeting
 winget install -s winget -e --id Tencent.QQ
+winget install -s winget -e --id Alibaba.DingTalk
 winget install -s winget -e --id NetEase.CloudMusic
 winget install -s winget -e --id Youdao.YoudaoDict
 winget install -s winget -e --id Baidu.BaiduNetdisk
@@ -252,7 +255,6 @@ winget install -s winget -e --id stax76.mpvdotnet
 winget install -s winget -e --id Zotero.Zotero
 
 # winget install -e --id Adobe.AdobeAcrobatReaderDC
-# winget install -e --id Alibaba.DingTalk
 
 ```
 
@@ -288,7 +290,7 @@ mkdir $HOME/bin
 * Download and extract
 
 ```powershell
-scoop install unzip
+scoop install aria2 unzip
 
 $array = "DU", "ProcessExplorer", "ProcessMonitor", "RAMMap"
 
