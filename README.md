@@ -254,6 +254,7 @@ winget install -s winget -e --id Baidu.BaiduNetdisk
 winget install -s winget -e --id Zotero.Zotero
 winget install -s msstore mpv.net
 winget install -s msstore "iQIYI Windows client app"
+winget install -s msstore "Microsoft Whiteboard"
 # winget install -e --id Adobe.AdobeAcrobatReaderDC
 
 ```
