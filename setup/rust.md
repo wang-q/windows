@@ -20,6 +20,7 @@ cargo install cargo-expand
 cargo install cargo-release
 
 cargo install intspan
+cargo install nwr
 
 ```
 
