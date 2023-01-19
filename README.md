@@ -20,16 +20,13 @@ Most following commands should be pasted to `Powershell`.
 
 ## Get ISO
 
-Some features of Windows 10 20H1/2004 are needed here.
+Windows 11
 
-* Build 19041.84 or later
+* Build 22000 or later
 * English or Chinese Simplified
 * 64-bit
 
-* Windows 10
-    * <ed2k:
-      //|file|zh-cn_windows_10_business_editions_version_21h1_updated_sep_2021_x64_dvd_023d42d3.iso|5709488128|B09B1BA01F76C80E2BD8E798C9E89E7D|/>
-    * <magnet:?xt=urn:btih:5C66F9BE1E46D0D4F7EC418D54C3A3FB03679D6D&dn=zh-cn_windows_10_business_editions_version_21h1_updated_sep_2021_x64_dvd_023d42d3.iso&xl=5709488128>
+* `winget` and `Windows Terminal` are now built-in
 
 * Windows 11
     * <ed2k:
@@ -53,9 +50,9 @@ systeminfo
 
 ```
 
-After Windows updating, the Windows version is 19042.804 as my current date.
+After Windows updating, the Windows version is 22621.1105 as my current date.
 
-## Enable some optional features of Windows 10
+## Enable some optional features of Windows
 
 * Mount Windows ISO to D: (or others)
 
@@ -63,16 +60,16 @@ After Windows updating, the Windows version is 19042.804 as my current date.
 
 ```powershell
 # .Net 2.5 and 3
-DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:D:\sources\sxs
+DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /LimitAccess /Source:D:\sources\sxs /NoRestart
 
 # Online
-# DISM /Online /Enable-Feature /FeatureName:NetFx3 /All
+# DISM /Online /Enable-Feature /FeatureName:NetFx3 /All /NoRestart
 
 # SMB 1
-Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All
+Enable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol -All -NoRestart
 
 # Telnet
-DISM /Online /Enable-Feature /FeatureName:TelnetClient
+DISM /Online /Enable-Feature /FeatureName:TelnetClient /NoRestart
 
 ```
 
@@ -80,15 +77,15 @@ DISM /Online /Enable-Feature /FeatureName:TelnetClient
 
 * Follow instructions of [this page](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
 
-* Open PowerShell as an Administrator
+* Open an elevated PowerShell
 
 ```powershell
 # HyperV
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -NoRestart
 
-# WSL
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
+# # WSL
+# Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
 
 ```
 
@@ -153,17 +150,6 @@ mklink /D c:\Users\wangq\data d:\data
 ## Install `winget` and `Windows Terminal`
 
 ```powershell
-if (!(Test-Path Microsoft.WindowsTerminal.msixbundle -PathType Leaf))
-{
-    Invoke-WebRequest `
-        'https://github.com/microsoft/winget-cli/releases/download/v1.2.10271/Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle' `
-        -OutFile 'Microsoft.DesktopAppInstaller.msixbundle'
-}
-Add-AppxPackage -path .\Microsoft.DesktopAppInstaller.msixbundle
-
-winget --version
-
-winget install -e --id Microsoft.WindowsTerminal
 
 winget install -e --id Microsoft.PowerShell
 
