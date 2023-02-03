@@ -5,8 +5,8 @@
 * Install `Scoop`
 
 ```powershell
-set-executionpolicy remotesigned -s currentuser
-iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+irm get.scoop.sh | iex
 
 scoop install sudo 7zip
 
