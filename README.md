@@ -106,9 +106,9 @@ Search `bash` in Microsoft Store or use the following command lines.
 ```powershell
 if (!(Test-Path Ubuntu.appx -PathType Leaf))
 {
-    Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu.appx -UseBasicParsing
+    Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu2004.appx -UseBasicParsing
 }
-Add-AppxPackage .\Ubuntu.appx
+Add-AppxPackage .\Ubuntu2004.appx
 
 ```
 
@@ -150,8 +150,7 @@ mklink /D c:\Users\wangq\data d:\data
 ## Install `winget` and `Windows Terminal`
 
 ```powershell
-
-winget install -e --id Microsoft.PowerShell
+winget install -s msstore --accept-package-agreements PowerShell
 
 winget install -e --id Git.Git
 
@@ -205,7 +204,7 @@ winget install -s winget -e --id Kitware.CMake
 # development
 winget install -s winget -e --id GitHub.GitHubDesktop
 winget install -s winget -e --id WinSCP.WinSCP
-winget install -s winget -e --id Microsoft.VisualStudioCode
+winget install -s msstore --accept-package-agreements "Visual Studio Code"
 winget install -s winget -e --id ScooterSoftware.BeyondCompare4
 winget install -s winget -e --id JetBrains.Toolbox
 winget install -s winget -e --id Clement.bottom
@@ -220,7 +219,7 @@ winget install -s winget -e --id Clement.bottom
 # utils
 winget install -s winget -e --id voidtools.Everything
 winget install -s winget -e --id Bandisoft.Bandizip
-winget install -s msstore Rufus # need v3.18 or higher
+winget install -s msstore --accept-package-agreements Rufus # need v3.18 or higher
 winget install -s winget -e --id QL-Win.QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
 winget install -s winget -e --id HandBrake.HandBrake
@@ -238,9 +237,9 @@ winget install -s winget -e --id NetEase.CloudMusic
 winget install -s winget -e --id Youdao.YoudaoDict
 winget install -s winget -e --id Baidu.BaiduNetdisk
 winget install -s winget -e --id Zotero.Zotero
-winget install -s msstore mpv.net
-winget install -s msstore "iQIYI Windows client app"
-winget install -s msstore "Microsoft Whiteboard"
+winget install -s msstore --accept-package-agreements mpv.net
+winget install -s msstore --accept-package-agreements "iQIYI Windows client app"
+winget install -s msstore --accept-package-agreements "Microsoft Whiteboard"
 # winget install -e --id Adobe.AdobeAcrobatReaderDC
 
 ```
