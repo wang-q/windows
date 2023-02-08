@@ -1,11 +1,11 @@
-# Setting-up scripts for Windows 10
+# Setting-up scripts for Windows 11
 
 [TOC levels=1-3]: # ""
 
-- [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-10)
+- [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-11)
     - [Get ISO](#get-iso)
     - [Install, active and update Windows](#install-active-and-update-windows)
-    - [Enable some optional features of Windows 10](#enable-some-optional-features-of-windows-10)
+    - [Enable some optional features of Windows](#enable-some-optional-features-of-windows)
     - [WSL 2](#wsl-2)
     - [Ubuntu 20.04](#ubuntu-2004)
     - [Install `winget` and `Windows Terminal`](#install-winget-and-windows-terminal)
@@ -89,8 +89,8 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -NoRes
 
 ```
 
-Update the [WSL 2](https://docs.microsoft.com/en-us/windows/wsl/wsl2-kernel) Linux kernel if
-necessarily.
+Install the GA version of [WSL](https://www.microsoft.com/store/productId/9P9TQF7MRM4R) from the
+Windows store.
 
 Restart then set WSL 2 as default.
 
@@ -147,7 +147,9 @@ mklink /D c:\Users\wangq\data d:\data
 
 ```
 
-## Install `winget` and `Windows Terminal`
+## `winget` and `Windows Terminal`
+
+`winget` and `Windows Terminal` are now included by Windows 11
 
 ```powershell
 winget install -s msstore --accept-package-agreements PowerShell
@@ -280,11 +282,13 @@ scoop install aria2 unzip
 
 $array = "DU", "ProcessExplorer", "ProcessMonitor", "RAMMap"
 
-foreach ($app in $array) {
+foreach ($app in $array)
+{
     iwr "https://download.sysinternals.com/files/$app.zip" -O "$app.zip"
 }
 
-foreach ($app in $array) {
+foreach ($app in $array)
+{
     unzip "$app.zip" -d $HOME/bin -x Eula.txt
 }
 
