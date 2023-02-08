@@ -6,29 +6,29 @@
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+# $ENV:ALL_PROXY='socks5h://localhost:10808'
+
 irm get.scoop.sh | iex
 
 scoop install sudo 7zip
 
-scoop install aria2 dark innounp
+scoop install dark innounp
 
 ```
-
-Scoop can utilize aria2 to use multi-connection downloads.
-
-Close the powershell window and start a new one to refresh the environment variables.
 
 ## Install packages
 
 ```powershell
-scoop bucket add extras
-
-scoop install curl wget
+scoop install aria2 curl wget
 scoop install gzip unzip grep
 scoop install jq jid pandoc
 
 scoop install bat ripgrep tokei hyperfine
-scoop install sqlite sqlitestudio
+scoop install sqlite
+
+scoop bucket add extras
+scoop install sqlitestudio
 
 # scoop install proxychains
 
