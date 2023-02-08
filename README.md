@@ -1,20 +1,25 @@
 # Setting-up scripts for Windows 11
 
-[TOC levels=1-3]: # ""
+<!-- toc -->
 
-- [Setting-up scripts for Windows 10](#setting-up-scripts-for-windows-11)
-    - [Get ISO](#get-iso)
-    - [Install, active and update Windows](#install-active-and-update-windows)
-    - [Enable some optional features of Windows](#enable-some-optional-features-of-windows)
-    - [WSL 2](#wsl-2)
-    - [Ubuntu 20.04](#ubuntu-2004)
-    - [Install `winget` and `Windows Terminal`](#install-winget-and-windows-terminal)
-    - [Optional: Adjusting Windows](#optional-adjusting-windows)
-    - [Optional: winget-pkgs](#optional-winget-pkgs)
-    - [Optional: Windows 7 games](#optional-windows-7-games)
-    - [Optional: Packages Managements](#optional-packages-managements)
-    - [Optional: Rust and C/C++](#optional-rust-and-cc)
-    - [Directory Organization](#directory-organization)
+- [Get ISO](#get-iso)
+- [Install, active and update Windows](#install-active-and-update-windows)
+- [Enable some optional features of Windows](#enable-some-optional-features-of-windows)
+- [WSL 2](#wsl-2)
+- [Ubuntu 20.04](#ubuntu-2004)
+  * [`systemd`](#systemd)
+  * [Symlinks](#symlinks)
+- [`winget` and `Windows Terminal`](#winget-and-windows-terminal)
+- [Optional: Adjusting Windows](#optional-adjusting-windows)
+- [Optional: winget-pkgs](#optional-winget-pkgs)
+- [Optional: Windows 7 games](#optional-windows-7-games)
+- [Optional: Packages Managements](#optional-packages-managements)
+- [Optional: Rust and C/C++](#optional-rust-and-cc)
+- [Optional: sysinternals](#optional-sysinternals)
+- [Optional: QuickLook Plugins](#optional-quicklook-plugins)
+- [Directory Organization](#directory-organization)
+
+<!-- tocstop -->
 
 Most following commands should be pasted to `Powershell`.
 
@@ -121,6 +126,10 @@ The following command verifies the status of WSL:
 wsl -l -v
 
 ```
+
+### `systemd`
+
+https://devblogs.microsoft.com/commandline/systemd-support-is-now-available-in-wsl/
 
 ### Symlinks
 
@@ -336,4 +345,3 @@ Select the `qlplugin` file and press `Spacebar` to install the plugin.
 * [`packer/`](packer/): Scripts for building a Windows 10 box for Parallels.
 
 * [`setup/`](setup/): Scripts for setting-up Windows.
-
