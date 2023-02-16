@@ -34,15 +34,13 @@ Windows 11
 * `winget` and `Windows Terminal` are now built-in
 
 * Windows 11
-    * <ed2k:
-      //|file|zh-cn_windows_11_business_editions_version_21h2_updated_october_2021_x64_dvd_a84e149f.iso|5419143168|B0C4BE7271CD65B2173326239D4F8BA2|/>
-    * <magnet:?xt=urn:btih:98BB0A1703D5E36ADCE9BAAA1E02D86C29C4DF95&dn=zh-cn_windows_11_business_editions_version_21h2_updated_october_2021_x64_dvd_a84e149f.iso&xl=5419143168>
+    * <magnet:?xt=urn:btih:01f5fe67f19cf107330490f658836c6037054f65&dn=zh-cn_windows_11_business_editions_version_22h2_updated_jan_2023_x64_dvd_82450200.iso&xl=5628721152>
 
 ## Install, active and update Windows
 
 * Enable Virtualization in BIOS or VM
 
-* Active Windows 10 via KMS, <http://kms.nju.edu.cn/>
+* Active Windows via KMS, <http://kms.nju.edu.cn/>
 
 * Update Windows and then check system info
 
