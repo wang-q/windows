@@ -53,7 +53,7 @@ systeminfo
 
 ```
 
-After Windows updating, the Windows version is 22621.1105 as my current date.
+After Windows updating, the Windows version is 22621.1265 as my current date.
 
 ## Enable some optional features of Windows
 
@@ -227,12 +227,12 @@ winget install -s winget -e --id Clement.bottom
 
 # utils
 winget install -s winget -e --id voidtools.Everything
-winget install -s winget -e --id Bandisoft.Bandizip
+winget install -s msstore --accept-package-agreements Bandizip
 winget install -s msstore --accept-package-agreements Rufus # need v3.18 or higher
 winget install -s msstore --accept-package-agreements QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
 winget install -s winget -e --id HandBrake.HandBrake
-winget install -s winget -e --id Microsoft.PowerToys
+winget install -s msstore --accept-package-agreements "Microsoft PowerToys"
 winget install -s winget -e --id qBittorrent.qBittorrent
 # winget install -s winget -e --id IrfanSkiljan.IrfanView
 
