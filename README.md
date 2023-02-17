@@ -249,7 +249,7 @@ winget install -s winget -e --id Zotero.Zotero
 winget install -s msstore --accept-package-agreements mpv.net
 winget install -s msstore --accept-package-agreements "iQIYI Windows client app"
 winget install -s msstore --accept-package-agreements "Microsoft Whiteboard"
-# winget install -e --id Adobe.AdobeAcrobatReaderDC
+winget install -s msstore --accept-package-agreements "Adobe Acrobat Reader DC"
 
 ```
 
