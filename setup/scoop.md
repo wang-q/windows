@@ -20,11 +20,21 @@ scoop install dark innounp
 ## Install packages
 
 ```powershell
+# downloading tools
 scoop install aria2 curl wget
-scoop install gzip unzip grep
-scoop install jq jid pandoc
 
-scoop install bat ripgrep tokei hyperfine
+# gnu
+scoop install gzip unzip grep
+scoop install sed tar
+
+scoop install jq jid pup 
+scoop install datamash miller
+
+scoop install bat tealdeer
+scoop install hyperfine ripgrep tokei 
+scoop install bottom
+
+scoop install pandoc
 scoop install sqlite
 
 scoop bucket add extras
