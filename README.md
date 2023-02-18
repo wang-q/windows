@@ -159,15 +159,11 @@ mklink /D c:\Users\wangq\data d:\data
 `winget` and `Windows Terminal` are now included by Windows 11
 
 ```powershell
-winget install -s msstore --accept-package-agreements PowerShell
-
-winget install -e --id Git.Git
+winget install -s winget -e --id Git.Git
 
 ```
 
 Open `Windows Terminal`
-
-* Set `Settings` -> `Startup` -> `Default profile` to `PowerShell`, not `Windows PowerShell`.
 
 * Set `Default terminal application` to `Windows Terminal`.
 
@@ -207,6 +203,7 @@ winget install -s winget -e --id RProject.R
 # winget install -s winget-e --id OpenJS.NodeJS.LTS
 winget install -s winget -e --id RStudio.RStudio.OpenSource
 winget install -s winget -e --id Kitware.CMake
+winget install -s winget -e --id Microsoft.PowerShell
 
 # development
 winget install -s winget -e --id GitHub.GitHubDesktop
