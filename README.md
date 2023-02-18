@@ -12,11 +12,11 @@
 - [`winget` and `Windows Terminal`](#winget-and-windows-terminal)
 - [Optional: Adjusting Windows](#optional-adjusting-windows)
 - [Optional: winget-pkgs](#optional-winget-pkgs)
-- [Optional: Windows 7 games](#optional-windows-7-games)
 - [Optional: Packages Managements](#optional-packages-managements)
 - [Optional: Rust and C/C++](#optional-rust-and-cc)
 - [Optional: sysinternals](#optional-sysinternals)
 - [Optional: QuickLook Plugins](#optional-quicklook-plugins)
+- [Optional: Windows 7 games](#optional-windows-7-games)
 - [Directory Organization](#directory-organization)
 
 <!-- tocstop -->
@@ -198,10 +198,8 @@ Log in to the Microsoft Store and get updates from there.
 
 ```powershell
 # programming
-# winget install -s winget -e --id AdoptOpenJDK.OpenJDK
 winget install -s winget -e --id Oracle.JavaRuntimeEnvironment
 winget install -s winget -e --id Oracle.JDK.18
-# winget install -s winget -e --id Microsoft.dotnet
 winget install -s winget -e --id StrawberryPerl.StrawberryPerl
 # winget install -e --id Python.Python
 winget install -s winget -e --id RProject.R
@@ -216,6 +214,7 @@ winget install -s winget -e --id WinSCP.WinSCP
 winget install -s msstore --accept-package-agreements "Visual Studio Code"
 winget install -s winget -e --id ScooterSoftware.BeyondCompare4
 winget install -s winget -e --id JetBrains.Toolbox
+
 # winget install -e --id WinFsp.WinFsp
 # winget install -e --id SSHFS-Win.SSHFS-Win
 # \\sshfs\REMUSER@HOST[\PATH]
@@ -252,18 +251,21 @@ winget install -s msstore --accept-package-agreements "Adobe Acrobat Reader DC"
 
 ```
 
-## Optional: Windows 7 games
-
-<https://winaero.com/download.php?view.1836>
-
 ## Optional: Packages Managements
 
-* [`scoop.md`](setup/scoop.md)
-* [`msys2.md`](setup/msys2.md)
+[scoop.md](setup/scoop.md): 
+
+> Scoop is an installer.
+>
+> The goal of Scoop is to let you use Unix-y programs in a normal Windows environment.
+>
+> Scoop focuses on open-source, command-line developer tools.
+
+Other options include `Chocolatey` and `msys2`, but I don't really like either of them.
 
 ## Optional: Rust and C/C++
 
-* [`rust.md`](setup/rust.md)
+* [rust.md](setup/rust.md)
 
 ## Optional: sysinternals
 
@@ -336,6 +338,10 @@ curl.exe -LO $url
 ```
 
 Select the `qlplugin` file and press `Spacebar` to install the plugin.
+
+## Optional: Windows 7 games
+
+<https://winaero.com/download.php?view.1836>
 
 ## Directory Organization
 
