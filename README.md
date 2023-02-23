@@ -211,6 +211,7 @@ winget install -s winget -e --id WinSCP.WinSCP
 winget install -s msstore --accept-package-agreements "Visual Studio Code"
 winget install -s winget -e --id ScooterSoftware.BeyondCompare4
 winget install -s winget -e --id JetBrains.Toolbox
+winget install -s winget -e --id RealVNC.VNCViewer
 
 # winget install -e --id WinFsp.WinFsp
 # winget install -e --id SSHFS-Win.SSHFS-Win
