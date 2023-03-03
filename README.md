@@ -190,6 +190,16 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass `
 
 Log in to the Microsoft Store and get updates from there.
 
+* Remove "Home" (主文件夹) from Explorer in Windows 11
+
+```cmd
+reg add "HKCU\Software\Classes\CLSID\{f874310e-b6b7-47dc-bc84-b9e6b38f5903}" /v System.IsPinnedToNameSpaceTree /d 0 /t REG_DWORD /f
+
+# manually accessing that view is still possible
+explorer.exe shell:::{f874310e-b6b7-47dc-bc84-b9e6b38f5903}
+
+```
+
 ## Optional: winget-pkgs
 
 ```powershell
