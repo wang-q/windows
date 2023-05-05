@@ -11,6 +11,8 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 irm get.scoop.sh | iex
 
+scoop bucket add main
+
 scoop install sudo 7zip
 
 scoop install dark innounp
@@ -22,6 +24,8 @@ scoop install dark innounp
 ```powershell
 # downloading tools
 scoop install aria2 curl wget
+
+scoop config aria2-enabled false
 
 # gnu
 scoop install gzip unzip grep
