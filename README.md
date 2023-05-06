@@ -239,6 +239,7 @@ winget install -s msstore --accept-package-agreements QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
 winget install -s msstore --accept-package-agreements "Microsoft PowerToys"
 winget install -s winget -e --id qBittorrent.qBittorrent
+winget install -s winget -e --id Fndroid.ClashForWindows
 
 # media
 winget install -s winget -e --id NetEase.CloudMusic
@@ -263,7 +264,7 @@ winget install -s msstore --accept-package-agreements "Adobe Acrobat Reader DC"
 
 ## Optional: Packages Managements
 
-[scoop.md](setup/scoop.md): 
+[scoop.md](setup/scoop.md):
 
 > Scoop is an installer.
 >
