@@ -7,7 +7,7 @@
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-# $ENV:ALL_PROXY='socks5h://localhost:10808'
+# $ENV:ALL_PROXY='socks5h://localhost:7890'
 
 irm get.scoop.sh | iex
 
@@ -31,11 +31,11 @@ scoop config aria2-enabled false
 scoop install gzip unzip grep
 scoop install sed tar
 
-scoop install jq jid pup 
+scoop install jq jid pup
 scoop install datamash miller
 
 scoop install bat tealdeer
-scoop install hyperfine ripgrep tokei 
+scoop install hyperfine ripgrep tokei
 scoop install bottom
 
 scoop install pandoc
