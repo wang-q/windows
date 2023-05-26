@@ -256,7 +256,7 @@ winget install -s winget -e --id Tencent.QQ
 winget install -s winget -e --id Alibaba.DingTalk
 winget install -s winget -e --id Youdao.YoudaoDict
 winget install -s winget -e --id Baidu.BaiduNetdisk
-winget install -s winget -e --id Zotero.Zotero
+winget install -s winget -e --id DigitalScholar.Zotero
 winget install -s msstore --accept-package-agreements "Microsoft Whiteboard"
 winget install -s msstore --accept-package-agreements "Adobe Acrobat Reader DC"
 
