@@ -210,13 +210,14 @@ winget install -s winget -e --id StrawberryPerl.StrawberryPerl
 # winget install -e --id Python.Python
 winget install -s winget -e --id RProject.R
 # winget install -s winget -e --id RProject.Rtools
-# winget install -s winget-e --id OpenJS.NodeJS.LTS
+# winget install -s winget -e --id OpenJS.NodeJS.LTS
 winget install -s winget -e --id RStudio.RStudio.OpenSource
 winget install -s winget -e --id Kitware.CMake
 winget install -s winget -e --id Microsoft.PowerShell
 
 # development
 winget install -s winget -e --id GitHub.GitHubDesktop
+winget install -s winget -e --id GitHub.cli
 winget install -s winget -e --id WinSCP.WinSCP
 winget install -s msstore --accept-package-agreements "Visual Studio Code"
 winget install -s winget -e --id ScooterSoftware.BeyondCompare4
