@@ -7,7 +7,7 @@
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-# $ENV:ALL_PROXY='socks5h://localhost:7890'
+# $ENV:ALL_PROXY='socks5h://localhost:10808'
 
 irm get.scoop.sh | iex
 
