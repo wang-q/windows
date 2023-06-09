@@ -24,3 +24,6 @@ wsl -l -v
 wsl -d CentOS
 
 <!-- wsl --unregister CentOS -->
+
+wsl --terminate CentOS
+wsl -d CentOS
