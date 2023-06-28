@@ -12,9 +12,9 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 irm get.scoop.sh | iex
 
 scoop bucket add main
+scoop bucket add extras
 
 scoop install sudo 7zip
-
 scoop install dark innounp
 
 ```
@@ -41,16 +41,12 @@ scoop install bottom
 scoop install pandoc
 scoop install sqlite
 
-scoop bucket add extras
+# extra
 scoop install sqlitestudio
 
 # scoop install proxychains
 
-```
-
-* List installed packages
-
-```powershell
+# List installed packages
 scoop list
 
 ```

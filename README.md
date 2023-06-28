@@ -240,7 +240,7 @@ winget install -s msstore --accept-package-agreements QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
 winget install -s msstore --accept-package-agreements "Microsoft PowerToys"
 winget install -s winget -e --id qBittorrent.qBittorrent
-winget install -s winget -e --id Fndroid.ClashForWindows
+# winget install -s winget -e --id Fndroid.ClashForWindows
 
 # media
 winget install -s winget -e --id NetEase.CloudMusic
@@ -250,11 +250,12 @@ winget install -s msstore --accept-package-agreements "iQIYI Windows client app"
 # winget install -s winget -e --id IrfanSkiljan.IrfanView
 
 # apps
-winget install -s winget -e --id Mozilla.Firefox
+# winget install -s winget -e --id Mozilla.Firefox
 winget install -s winget -e --id Tencent.WeChat
 winget install -s winget -e --id Tencent.TencentMeeting
 winget install -s winget -e --id Tencent.QQ
 winget install -s winget -e --id Alibaba.DingTalk
+winget install -s winget -e --id ByteDance.Feishu
 winget install -s winget -e --id Youdao.YoudaoDict
 winget install -s winget -e --id Baidu.BaiduNetdisk
 winget install -s winget -e --id DigitalScholar.Zotero
