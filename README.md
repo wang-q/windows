@@ -240,6 +240,7 @@ winget install -s msstore --accept-package-agreements QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
 winget install -s msstore --accept-package-agreements "Microsoft PowerToys"
 winget install -s winget -e --id qBittorrent.qBittorrent
+winget install -s winget -e --id OlegDanilov.RapidEnvironmentEditor
 # winget install -s winget -e --id Fndroid.ClashForWindows
 
 # media
