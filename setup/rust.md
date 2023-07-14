@@ -33,6 +33,11 @@ cargo install nwr
 
 ```
 
+> Due to it's design IO between the host (Windows) and virtual machine (distro inside WSL2) is slow and the latency is enormous.
+> With WSL2 you should be always compiling your project from Linux filesystem and not from Windows mounted directories
+
+https://github.com/rust-lang/rust/issues/55684#issuecomment-734433698
+
 ## [`vcpkg`](https://github.com/microsoft/vcpkg)
 
 * Install vcpkg. Open PowerShell as an Administrator
