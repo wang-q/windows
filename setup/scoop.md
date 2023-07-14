@@ -8,6 +8,8 @@
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 # $ENV:ALL_PROXY='socks5h://localhost:10808'
+# $ENV:HTTP_PROXY='http://localhost:10809'
+# $ENV:HTTPS_PROXY='http://localhost:10809'
 
 irm get.scoop.sh | iex
 
