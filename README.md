@@ -224,6 +224,8 @@ winget install -s winget -e --id ScooterSoftware.BeyondCompare4
 winget install -s winget -e --id JetBrains.Toolbox
 winget install -s winget -e --id RealVNC.VNCViewer
 winget install -s msstore --accept-package-agreements "RedisInsight"
+winget install -s winget -e --id  Memurai.MemuraiDeveloper # Windows port of Redis
+# memurai.exe --service-uninstall # I don't need this service
 
 # winget install -e --id WinFsp.WinFsp
 # winget install -e --id SSHFS-Win.SSHFS-Win
