@@ -357,6 +357,10 @@ curl.exe -LO $url
 
 Select the `qlplugin` file and press `Spacebar` to install the plugin.
 
+## Optional: Fonts
+
+https://adictoalaintensidad.blogspot.com/2021/11/configuracion-de-powershell-en-windows.html
+
 ## Optional: Windows 7 games
 
 <https://winaero.com/download.php?view.1836>
