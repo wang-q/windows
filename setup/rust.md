@@ -19,7 +19,7 @@ rustup component add clippy rust-analysis rust-src rustfmt
 cargo install cargo-expand
 cargo install cargo-release
 cargo install cargo-binstall
-cargo binstall cargo-tarpaulin
+cargo install cargo-tarpaulin
 
 cargo install intspan
 cargo install nwr
