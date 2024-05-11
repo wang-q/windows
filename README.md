@@ -246,6 +246,8 @@ winget install -s winget -e --id qBittorrent.qBittorrent
 winget install -s winget -e --id OlegDanilov.RapidEnvironmentEditor
 winget install -s winget -e --id valinet.ExplorerPatcher
 # winget install -s winget -e --id Fndroid.ClashForWindows
+winget install --id "CrystalDewWorld.CrystalDiskInfo"
+winget install --id "CrystalDewWorld.CrystalDiskMark"
 
 # media
 winget install -s winget -e --id NetEase.CloudMusic
