@@ -363,10 +363,6 @@ Select the `qlplugin` file and press `Spacebar` to install the plugin.
 
 https://adictoalaintensidad.blogspot.com/2021/11/configuracion-de-powershell-en-windows.html
 
-## Optional: Windows 7 games
-
-<https://winaero.com/download.php?view.1836>
-
 ## Directory Organization
 
 * [`packer/`](packer/): Scripts for building a Windows 10 box for Parallels.
