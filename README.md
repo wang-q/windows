@@ -246,6 +246,8 @@ winget install -s winget -e --id qBittorrent.qBittorrent
 winget install -s winget -e --id OlegDanilov.RapidEnvironmentEditor
 winget install -s winget -e --id valinet.ExplorerPatcher
 # winget install -s winget -e --id Fndroid.ClashForWindows
+winget install --id "CrystalDewWorld.CrystalDiskInfo"
+winget install --id "CrystalDewWorld.CrystalDiskMark"
 
 # media
 winget install -s winget -e --id NetEase.CloudMusic
@@ -360,9 +362,9 @@ curl.exe -LO $url
 
 Select the `qlplugin` file and press `Spacebar` to install the plugin.
 
-## Optional: Windows 7 games
+## Optional: Fonts
 
-<https://winaero.com/download.php?view.1836>
+https://adictoalaintensidad.blogspot.com/2021/11/configuracion-de-powershell-en-windows.html
 
 ## Directory Organization
 
