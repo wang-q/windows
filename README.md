@@ -251,7 +251,7 @@ winget install -s winget -e --id valinet.ExplorerPatcher
 winget install -s winget -e --id NetEase.CloudMusic
 winget install -s winget -e --id HandBrake.HandBrake
 winget install -s msstore --accept-package-agreements mpv.net
-winget install -s msstore --accept-package-agreements "iQIYI Windows client app"
+#winget install -s msstore --accept-package-agreements "iQIYI Windows client app"
 # winget install -s winget -e --id IrfanSkiljan.IrfanView
 
 # apps
@@ -266,6 +266,9 @@ winget install -s winget -e --id Baidu.BaiduNetdisk
 winget install -s winget -e --id DigitalScholar.Zotero
 winget install -s msstore --accept-package-agreements "Microsoft Whiteboard"
 winget install -s msstore --accept-package-agreements "Adobe Acrobat Reader DC"
+
+# upgrading
+winget upgrade --all --accept-package-agreements --source winget
 
 ```
 
