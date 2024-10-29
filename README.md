@@ -273,6 +273,9 @@ winget install -s msstore --accept-package-agreements "Adobe Acrobat Reader DC"
 # upgrading
 winget upgrade --all --accept-package-agreements --source winget
 
+# uninstall
+winget uninstall "Windows web experience Pack"
+
 ```
 
 ## Optional: Packages Managements
