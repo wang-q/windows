@@ -227,6 +227,7 @@ winget install -s winget -e --id RealVNC.VNCViewer
 winget install qishibo.AnotherRedisDesktopManager
 winget install -s winget -e --id  Memurai.MemuraiDeveloper # Windows port of Redis
 # memurai.exe --service-uninstall # I don't need this service
+winget install -s winget -e --id Mobatek.MobaXterm
 
 # winget install -e --id WinFsp.WinFsp
 # winget install -e --id SSHFS-Win.SSHFS-Win
