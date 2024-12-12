@@ -220,9 +220,10 @@ winget install -s winget -e --id GitHub.GitHubDesktop
 winget install -s winget -e --id GitHub.cli
 winget install -s winget -e --id WinSCP.WinSCP
 winget install -s msstore --accept-package-agreements "Visual Studio Code"
-winget install -s winget -e --id ScooterSoftware.BeyondCompare4
+# winget install -s winget -e --id ScooterSoftware.BeyondCompare.4
+winget install -s winget -e --id ScooterSoftware.BeyondCompare.5
 winget install -s winget -e --id JetBrains.Toolbox
-winget install -s winget -e --id RealVNC.VNCViewer
+# winget install -s winget -e --id RealVNC.VNCViewer
 # winget install -s msstore --accept-package-agreements "Redis Insight"
 winget install qishibo.AnotherRedisDesktopManager
 winget install -s winget -e --id  Memurai.MemuraiDeveloper # Windows port of Redis
@@ -252,9 +253,9 @@ winget install --id "CrystalDewWorld.CrystalDiskInfo"
 winget install --id "CrystalDewWorld.CrystalDiskMark"
 
 # media
-winget install -s winget -e --id NetEase.CloudMusic
+# winget install -s winget -e --id NetEase.CloudMusic
 winget install -s winget -e --id HandBrake.HandBrake
-winget install -s msstore --accept-package-agreements mpv.net
+winget install -s winget -e --id mpv.net
 #winget install -s msstore --accept-package-agreements "iQIYI Windows client app"
 # winget install -s winget -e --id IrfanSkiljan.IrfanView
 
@@ -265,7 +266,7 @@ winget install -s winget -e --id Tencent.TencentMeeting
 winget install -s winget -e --id Tencent.QQ
 winget install -s winget -e --id Alibaba.DingTalk
 winget install -s winget -e --id ByteDance.Feishu
-winget install -s winget -e --id Youdao.YoudaoDict
+winget install -s winget -e --id Youdao.YoudaoTranslate
 winget install -s winget -e --id Baidu.BaiduNetdisk
 winget install -s winget -e --id DigitalScholar.Zotero
 winget install -s msstore --accept-package-agreements "Microsoft Whiteboard"
