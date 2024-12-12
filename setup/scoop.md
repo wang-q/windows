@@ -16,7 +16,7 @@ irm get.scoop.sh | iex
 scoop bucket add main
 scoop bucket add extras
 
-scoop install sudo 7zip
+scoop install 7zip
 scoop install dark innounp
 
 ```
@@ -34,7 +34,7 @@ scoop install gzip unzip grep
 scoop install sed tar
 
 scoop install jq jid pup
-scoop install datamash miller
+scoop install datamash
 
 scoop install bat tealdeer
 scoop install hyperfine ripgrep tokei
