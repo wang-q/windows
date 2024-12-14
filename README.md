@@ -223,7 +223,7 @@ winget install -s winget -e --id Microsoft.VisualStudioCode
 # winget install -s msstore --accept-package-agreements "Visual Studio Code"
 winget install -s winget -e --id ScooterSoftware.BeyondCompare.4
 # winget install -s winget -e --id ScooterSoftware.BeyondCompare.5
-winget install -s winget -e --id JetBrains.Toolbox
+# winget install -s winget -e --id JetBrains.Toolbox
 # winget install -s winget -e --id RealVNC.VNCViewer
 # winget install -s msstore --accept-package-agreements "Redis Insight"
 winget install qishibo.AnotherRedisDesktopManager
@@ -245,10 +245,10 @@ winget install -s msstore --accept-package-agreements Bandizip
 winget install -s msstore --accept-package-agreements Rufus # need v3.18 or higher
 winget install -s msstore --accept-package-agreements QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
-winget install -s msstore --accept-package-agreements "Microsoft PowerToys"
+# winget install -s msstore --accept-package-agreements "Microsoft PowerToys"
 winget install -s winget -e --id qBittorrent.qBittorrent
 winget install -s winget -e --id OlegDanilov.RapidEnvironmentEditor
-winget install -s winget -e --id valinet.ExplorerPatcher
+# winget install -s winget -e --id valinet.ExplorerPatcher
 # winget install -s winget -e --id Fndroid.ClashForWindows
 winget install --id "CrystalDewWorld.CrystalDiskInfo"
 winget install --id "CrystalDewWorld.CrystalDiskMark"
