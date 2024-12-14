@@ -219,9 +219,10 @@ winget install -s winget -e --id Microsoft.PowerShell
 winget install -s winget -e --id GitHub.GitHubDesktop
 winget install -s winget -e --id GitHub.cli
 winget install -s winget -e --id WinSCP.WinSCP
-winget install -s msstore --accept-package-agreements "Visual Studio Code"
-# winget install -s winget -e --id ScooterSoftware.BeyondCompare.4
-winget install -s winget -e --id ScooterSoftware.BeyondCompare.5
+winget install -s winget -e --id Microsoft.VisualStudioCode
+# winget install -s msstore --accept-package-agreements "Visual Studio Code"
+winget install -s winget -e --id ScooterSoftware.BeyondCompare.4
+# winget install -s winget -e --id ScooterSoftware.BeyondCompare.5
 winget install -s winget -e --id JetBrains.Toolbox
 # winget install -s winget -e --id RealVNC.VNCViewer
 # winget install -s msstore --accept-package-agreements "Redis Insight"
