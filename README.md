@@ -1,25 +1,25 @@
 # Setting-up scripts for Windows 11
 
-<!-- toc -->
+<!-- TOC -->
+* [Setting-up scripts for Windows 11](#setting-up-scripts-for-windows-11)
+  * [Get ISO](#get-iso)
+  * [Install, active and update Windows](#install-active-and-update-windows)
+  * [Enable some optional features of Windows](#enable-some-optional-features-of-windows)
+  * [WSL 2](#wsl-2)
+  * [Ubuntu 20.04](#ubuntu-2004)
+    * [`systemd`](#systemd)
+    * [Symlinks](#symlinks)
+  * [`winget` and `Windows Terminal`](#winget-and-windows-terminal)
+  * [Optional: Adjusting Windows](#optional-adjusting-windows)
+  * [Optional: winget-pkgs](#optional-winget-pkgs)
+  * [Optional: Packages Managements](#optional-packages-managements)
+  * [Optional: Rust and C/C++](#optional-rust-and-cc)
+  * [Optional: sysinternals](#optional-sysinternals)
+  * [Optional: QuickLook Plugins](#optional-quicklook-plugins)
+  * [Optional: Fonts](#optional-fonts)
+  * [Directory Organization](#directory-organization)
+<!-- TOC -->
 
-- [Get ISO](#get-iso)
-- [Install, active and update Windows](#install-active-and-update-windows)
-- [Enable some optional features of Windows](#enable-some-optional-features-of-windows)
-- [WSL 2](#wsl-2)
-- [Ubuntu 20.04](#ubuntu-2004)
-  * [`systemd`](#systemd)
-  * [Symlinks](#symlinks)
-- [`winget` and `Windows Terminal`](#winget-and-windows-terminal)
-- [Optional: Adjusting Windows](#optional-adjusting-windows)
-- [Optional: winget-pkgs](#optional-winget-pkgs)
-- [Optional: Packages Managements](#optional-packages-managements)
-- [Optional: Rust and C/C++](#optional-rust-and-cc)
-- [Optional: sysinternals](#optional-sysinternals)
-- [Optional: QuickLook Plugins](#optional-quicklook-plugins)
-- [Optional: Windows 7 games](#optional-windows-7-games)
-- [Directory Organization](#directory-organization)
-
-<!-- tocstop -->
 
 Most following commands should be pasted to `Powershell`.
 
