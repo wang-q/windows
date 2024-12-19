@@ -252,6 +252,7 @@ winget install -s winget -e --id OlegDanilov.RapidEnvironmentEditor
 # winget install -s winget -e --id Fndroid.ClashForWindows
 winget install --id "CrystalDewWorld.CrystalDiskInfo"
 winget install --id "CrystalDewWorld.CrystalDiskMark"
+winget install --id RustDesk.RustDesk
 
 # media
 # winget install -s winget -e --id NetEase.CloudMusic
