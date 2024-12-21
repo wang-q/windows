@@ -200,6 +200,22 @@ explorer.exe shell:::{f874310e-b6b7-47dc-bc84-b9e6b38f5903}
 
 ```
 
+### 关闭 MPO
+
+某些情况下, Chrome 浏览器周边的窗口会闪烁, 可能可以通过关闭 MPO 来改善.
+
+```powershell
+# Backup
+reg export "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm" "DwmBackup.reg"
+
+# Add the key
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /t REG_DWORD /d 5 /f  
+
+# Delete
+reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /f
+
+```
+
 ## Optional: winget-pkgs
 
 ```powershell
