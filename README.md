@@ -216,6 +216,13 @@ reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMod
 
 ```
 
+### Windows Defender exclusions
+
+```powershell
+Add-MpPreference -ExclusionPath "$HOME\Scripts"
+
+```
+
 ## Optional: winget-pkgs
 
 ```powershell
