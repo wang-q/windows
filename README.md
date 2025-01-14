@@ -234,7 +234,7 @@ winget install -s winget -e --id StrawberryPerl.StrawberryPerl
 winget install -s winget -e --id RProject.R
 # winget install -s winget -e --id RProject.Rtools
 # winget install -s winget -e --id OpenJS.NodeJS.LTS
-winget install -s winget -e --id RStudio.RStudio.OpenSource
+winget install -s winget -e --id Posit.RStudio
 winget install -s winget -e --id Kitware.CMake
 winget install -s winget -e --id Microsoft.PowerShell
 
