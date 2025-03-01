@@ -209,7 +209,7 @@ explorer.exe shell:::{f874310e-b6b7-47dc-bc84-b9e6b38f5903}
 reg export "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm" "DwmBackup.reg"
 
 # Add the key
-reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /t REG_DWORD /d 5 /f  
+reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /t REG_DWORD /d 5 /f
 
 # Delete
 reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm" /v OverlayTestMode /f
@@ -264,7 +264,8 @@ winget install -s winget -e --id Mobatek.MobaXterm
 
 # utils
 winget install -s winget -e --id voidtools.Everything
-winget install -s msstore --accept-package-agreements Bandizip
+# winget install -s msstore --accept-package-agreements Bandizip
+winget install -s msstore --accept-package-agreements NanaZip
 winget install -s msstore --accept-package-agreements Rufus # need v3.18 or higher
 winget install -s msstore --accept-package-agreements QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
