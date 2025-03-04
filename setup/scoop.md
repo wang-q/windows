@@ -2,8 +2,6 @@
 
 ## Install Scoop
 
-* Install `Scoop`
-
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
@@ -33,14 +31,12 @@ scoop config aria2-enabled false
 scoop install gzip unzip grep
 scoop install sed tar
 
-scoop install jq jid pup
+scoop install jid pup
 scoop install datamash
 
-scoop install bat tealdeer
-scoop install hyperfine ripgrep tokei
+scoop install bat
 scoop install bottom
 
-scoop install pandoc
 scoop install sqlite
 
 # extra
