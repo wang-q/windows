@@ -13,6 +13,7 @@ irm get.scoop.sh | iex
 
 scoop bucket add main
 scoop bucket add extras
+scoop bucket add versions
 
 scoop install 7zip
 scoop install dark innounp
@@ -31,11 +32,10 @@ scoop config aria2-enabled false
 scoop install gzip unzip grep
 scoop install sed tar
 
-scoop install jid pup
+scoop install pup
 scoop install datamash
 
 scoop install bat
-scoop install bottom
 
 scoop install sqlite
 
