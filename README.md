@@ -382,6 +382,14 @@ iwr https://api.github.com/repos/QL-Win/QuickLook.Plugin.OfficeViewer/releases/l
 )
 curl.exe -LO $url
 
+# pdf
+$url = (
+iwr https://api.github.com/repos/QL-Win/QuickLook.Plugin.PdfViewer-Native/releases/latest |
+    Select-Object -Expand Content |
+    jq -r '.assets[0].browser_download_url'
+)
+curl.exe -LO $url
+
 # folder
 $url = (
 iwr https://api.github.com/repos/adyanth/QuickLook.Plugin.FolderViewer/releases/latest |
