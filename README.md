@@ -264,8 +264,8 @@ winget install -s winget -e --id Mobatek.MobaXterm
 
 # utils
 winget install -s winget -e --id voidtools.Everything
-# winget install -s msstore --accept-package-agreements Bandizip
-winget install -s msstore --accept-package-agreements NanaZip
+winget install -s msstore --accept-package-agreements Bandizip
+# winget install -s msstore --accept-package-agreements NanaZip
 winget install -s msstore --accept-package-agreements Rufus # need v3.18 or higher
 winget install -s msstore --accept-package-agreements QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
