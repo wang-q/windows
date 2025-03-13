@@ -24,20 +24,15 @@ scoop install dark innounp
 
 ```powershell
 # downloading tools
-scoop install aria2 curl wget
+scoop install aria2 wget
 
 scoop config aria2-enabled false
 
 # gnu
 scoop install gzip unzip grep
-scoop install sed tar
+scoop install sed
 
 scoop install pup
-scoop install datamash
-
-scoop install bat
-
-scoop install sqlite
 
 # extra
 scoop install sqlitestudio
