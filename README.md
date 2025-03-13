@@ -25,15 +25,14 @@ Most following commands should be pasted to `Powershell`.
 
 ## Get ISO
 
-Windows 11
-
-* Build 22000 or later
-* English or Chinese Simplified
-* 64-bit
+* Windows 11
+    * Build 22000 or later
+    * English or Chinese Simplified
+    * 64-bit
 
 * `winget` and `Windows Terminal` are now built-in
 
-* Windows 11
+* Windows 11 ISO
     * <magnet:?xt=urn:btih:01f5fe67f19cf107330490f658836c6037054f65&dn=zh-cn_windows_11_business_editions_version_22h2_updated_jan_2023_x64_dvd_82450200.iso&xl=5628721152>
 
 ## Install, active and update Windows
@@ -200,9 +199,9 @@ explorer.exe shell:::{f874310e-b6b7-47dc-bc84-b9e6b38f5903}
 
 ```
 
-### 关闭 MPO
+### Disable MPO
 
-某些情况下, Chrome 浏览器周边的窗口会闪烁, 可能可以通过关闭 MPO 来改善.
+In some cases, Chrome browser windows may flicker around the edges. This can potentially be improved by disabling MPO.
 
 ```powershell
 # Backup
@@ -307,6 +306,29 @@ winget uninstall "Windows web experience Pack"
 ```
 
 ## Optional: Packages Managements
+
+I have developed a cross-platform package manager called `cbp` that can download packages from GitHub and install them automatically.
+
+```powershell
+# Install cbp
+iwr "https://github.com/wang-q/cbp/releases/latest/download/cbp.windows.exe" -OutFile cbp.windows.exe
+.\cbp.windows.exe init
+
+# Restart terminal
+
+# List available packages
+cbp avail windows
+cbp avail font          # font packages
+
+# Install packages
+cbp install fd jq
+
+# Manage packages
+cbp list                # list installed packages
+cbp list fd             # show package contents
+cbp remove fd           # remove package
+
+```
 
 [scoop.md](setup/scoop.md):
 
