@@ -1,5 +1,8 @@
 # Setting-up scripts for Windows 11
 
+This document provides step-by-step instructions for setting up a new Windows 11 system, including
+essential configurations, development environment setup, and recommended software installations.
+
 <!-- TOC -->
 * [Setting-up scripts for Windows 11](#setting-up-scripts-for-windows-11)
   * [Get ISO](#get-iso)
@@ -11,8 +14,12 @@
     * [Symlinks](#symlinks)
   * [`winget` and `Windows Terminal`](#winget-and-windows-terminal)
   * [Optional: Adjusting Windows](#optional-adjusting-windows)
-  * [Optional: winget-pkgs](#optional-winget-pkgs)
+    * [Disable MPO](#disable-mpo)
+    * [Windows Defender exclusions](#windows-defender-exclusions)
   * [Optional: Packages Managements](#optional-packages-managements)
+    * [Built-in Package Manager (winget)](#built-in-package-manager-winget)
+    * [Cross-platform Binary Package manager (cbp)](#cross-platform-binary-package-manager-cbp)
+    * [Alternative Package Managers](#alternative-package-managers)
   * [Optional: Rust and C/C++](#optional-rust-and-cc)
   * [Optional: sysinternals](#optional-sysinternals)
   * [Optional: QuickLook Plugins](#optional-quicklook-plugins)
@@ -21,25 +28,31 @@
 <!-- TOC -->
 
 
-Most following commands should be pasted to `Powershell`.
+Most commands in this document should be executed in `PowerShell`.
 
 ## Get ISO
+
+Requirements:
 
 * Windows 11
     * Build 22000 or later
     * English or Chinese Simplified
     * 64-bit
+    * `winget` and `Windows Terminal` are included by default
 
-* `winget` and `Windows Terminal` are now built-in
+Download:
 
-* Windows 11 ISO
-    * <magnet:?xt=urn:btih:01f5fe67f19cf107330490f658836c6037054f65&dn=zh-cn_windows_11_business_editions_version_22h2_updated_jan_2023_x64_dvd_82450200.iso&xl=5628721152>
+* Windows 11 Business Edition (22H2, Jan 2023 Update)
+    * [Magnet Link](magnet:?xt=urn:btih:01f5fe67f19cf107330490f658836c6037054f65&dn=zh-cn_windows_11_business_editions_version_22h2_updated_jan_2023_x64_dvd_82450200.iso&xl=5628721152)
 
 ## Install, active and update Windows
 
+Basic system setup steps to get Windows 11 ready for use.
+
 * Enable Virtualization in BIOS or VM
 
-* Active Windows via KMS, <http://kms.nju.edu.cn/>
+* Active Windows via KMS, <https://itsc.nju.edu.cn/21624/list.htm>
+  or <https://github.com/massgravel/Microsoft-Activation-Scripts>
 
 * Update Windows and then check system info
 
@@ -76,6 +89,8 @@ DISM /Online /Enable-Feature /FeatureName:TelnetClient /NoRestart
 ```
 
 ## WSL 2
+
+Windows Subsystem for Linux (WSL) 2 allows you to run Linux distributions natively on Windows.
 
 * Follow instructions of [this page](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)
 
@@ -201,7 +216,8 @@ explorer.exe shell:::{f874310e-b6b7-47dc-bc84-b9e6b38f5903}
 
 ### Disable MPO
 
-In some cases, Chrome browser windows may flicker around the edges. This can potentially be improved by disabling MPO.
+In some cases, Chrome browser windows may flicker around the edges. This can potentially be improved
+by disabling MPO.
 
 ```powershell
 # Backup
@@ -222,7 +238,11 @@ Add-MpPreference -ExclusionPath "$HOME\Scripts"
 
 ```
 
-## Optional: winget-pkgs
+## Optional: Packages Managements
+
+### Built-in Package Manager (winget)
+
+Windows Package Manager (winget) is the official package manager for Windows.
 
 ```powershell
 # programming
@@ -305,23 +325,27 @@ winget uninstall "Windows web experience Pack"
 
 ```
 
-## Optional: Packages Managements
+### Cross-platform Binary Package manager (cbp)
 
-I have developed a cross-platform package manager called `cbp` that can download packages from GitHub and install them automatically.
+I have developed a cross-platform package manager called `cbp` that can download prebuilt packages
+and install them automatically.
 
 ```powershell
 # Install cbp
+# $ENV:ALL_PROXY='socks5h://localhost:7890'
 iwr "https://github.com/wang-q/cbp/releases/latest/download/cbp.windows.exe" -OutFile cbp.windows.exe
 .\cbp.windows.exe init
 
-# Restart terminal
+# Restart terminal to apply changes
 
 # List available packages
 cbp avail windows
 cbp avail font          # font packages
 
 # Install packages
-cbp install fd jq
+cbp install curl jq
+cbp install bat fd
+cbp install datamash sqlite3
 
 # Manage packages
 cbp list                # list installed packages
@@ -330,15 +354,16 @@ cbp remove fd           # remove package
 
 ```
 
-[scoop.md](setup/scoop.md):
+### Alternative Package Managers
 
-> Scoop is an installer.
->
-> The goal of Scoop is to let you use Unix-y programs in a normal Windows environment.
->
-> Scoop focuses on open-source, command-line developer tools.
+* [scoop.md](setup/scoop.md):
+  > Scoop is an installer.
+  >
+  > The goal of Scoop is to let you use Unix-y programs in a normal Windows environment.
+  >
+  > Scoop focuses on open-source, command-line developer tools.
 
-Other options include `Chocolatey` and `msys2`, but I don't really like either of them.
+* Chocolatey and MSYS2 are other options but not recommended
 
 ## Optional: Rust and C/C++
 
@@ -426,7 +451,16 @@ Select the `qlplugin` file and press `Spacebar` to install the plugin.
 
 ## Optional: Fonts
 
-https://adictoalaintensidad.blogspot.com/2021/11/configuracion-de-powershell-en-windows.html
+```powershell
+cbp install -t font helvetica
+cbp install -t font fira
+cbp install -t font jetbrains-mono
+
+cbp install -t font source-han-sans
+cbp install -t font source-han-serif
+cbp install -t font lxgw-wenkai
+
+```
 
 ## Directory Organization
 
