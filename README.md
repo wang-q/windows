@@ -413,25 +413,9 @@ rm $HOME/bin/*64a.exe
 <https://github.com/QL-Win/QuickLook/wiki/Available-Plugins>
 
 ```powershell
-# epub
-$url = (
-iwr https://api.github.com/repos/QL-Win/QuickLook.Plugin.EpubViewer/releases/latest |
-    Select-Object -Expand Content |
-    jq -r '.assets[0].browser_download_url'
-)
-curl.exe -LO $url
-
 # office
 $url = (
 iwr https://api.github.com/repos/QL-Win/QuickLook.Plugin.OfficeViewer/releases/latest |
-    Select-Object -Expand Content |
-    jq -r '.assets[0].browser_download_url'
-)
-curl.exe -LO $url
-
-# pdf
-$url = (
-iwr https://api.github.com/repos/QL-Win/QuickLook.Plugin.PdfViewer-Native/releases/latest |
     Select-Object -Expand Content |
     jq -r '.assets[0].browser_download_url'
 )
