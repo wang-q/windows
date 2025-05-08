@@ -112,6 +112,8 @@ Windows store.
 Restart then set WSL 2 as default.
 
 ```powershell
+wsl.exe --install
+
 wsl --set-default-version 2
 
 ```
@@ -272,6 +274,7 @@ winget install qishibo.AnotherRedisDesktopManager
 winget install -s winget -e --id  Memurai.MemuraiDeveloper # Windows port of Redis
 # memurai.exe --service-uninstall # I don't need this service
 winget install -s winget -e --id Mobatek.MobaXterm
+winget install -s winget -e --id ByteDance.Trae
 
 # winget install -e --id WinFsp.WinFsp
 # winget install -e --id SSHFS-Win.SSHFS-Win
@@ -286,7 +289,7 @@ winget install -s winget -e --id voidtools.Everything
 winget install -s msstore --accept-package-agreements Bandizip
 # winget install -s msstore --accept-package-agreements NanaZip
 winget install -s msstore --accept-package-agreements Rufus # need v3.18 or higher
-winget install -s msstore --accept-package-agreements QuickLook
+winget install -s winget -e --id QL-Win.QuickLook
 winget install -s winget -e --id AntibodySoftware.WizTree
 # winget install -s msstore --accept-package-agreements "Microsoft PowerToys"
 winget install -s winget -e --id qBittorrent.qBittorrent
@@ -345,7 +348,7 @@ cbp avail font          # font packages
 # Install packages
 cbp install curl jq
 cbp install bat fd
-cbp install datamash sqlite3
+cbp install sqlite3
 
 # Manage packages
 cbp list                # list installed packages
@@ -372,7 +375,6 @@ cbp remove fd           # remove package
 ## Optional: sysinternals
 
 * Add `$HOME/bin` to Path
-* Open PowerShell as an Administrator
 
 ```powershell
 mkdir $HOME/bin
@@ -380,8 +382,8 @@ mkdir $HOME/bin
 # Add to Path
 [Environment]::SetEnvironmentVariable(
     "Path",
-    [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::Machine) + ";$HOME\bin",
-    [EnvironmentVariableTarget]::Machine)
+    [Environment]::GetEnvironmentVariable("Path", [EnvironmentVariableTarget]::User) + ";$HOME\bin",
+    [EnvironmentVariableTarget]::User)
 
 ```
 
