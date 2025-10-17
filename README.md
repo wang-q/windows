@@ -123,7 +123,7 @@ wsl --set-default-version 2
 Search `bash` in Microsoft Store or use the following command lines.
 
 ```powershell
-if (!(Test-Path Ubuntu.appx -PathType Leaf))
+if (!(Test-Path Ubuntu2004.appx -PathType Leaf))
 {
     Invoke-WebRequest -Uri https://aka.ms/wslubuntu2004 -OutFile Ubuntu2004.appx -UseBasicParsing
 }
