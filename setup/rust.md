@@ -4,6 +4,8 @@
 
 Select `Desktop development with C++` and Language packs English/Chinese
 
+[IDE](https://visualstudio.microsoft.com/free-developer-offers/)
+
 ## docs from Microsoft
 
 https://docs.microsoft.com/en-us/windows/dev-environment/rust/setup
