@@ -102,7 +102,7 @@ Windows Subsystem for Linux (WSL) 2 allows you to run Linux distributions native
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform -NoRestart
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All -NoRestart
 
-# # WSL
+# # WSL 1
 # Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux -NoRestart
 
 ```
