@@ -315,7 +315,7 @@ winget install -s winget -e --id Tencent.TencentMeeting
 winget install -s winget -e --id Tencent.QQ
 winget install -s winget -e --id Alibaba.DingTalk
 winget install -s winget -e --id ByteDance.Feishu
-winget install -s winget -e --id Youdao.YoudaoTranslate
+# winget install -s winget -e --id Youdao.YoudaoTranslate
 winget install -s winget -e --id Baidu.BaiduNetdisk
 winget install -s winget -e --id DigitalScholar.Zotero
 winget install -s msstore --accept-package-agreements "Microsoft Whiteboard"
