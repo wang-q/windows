@@ -9,9 +9,8 @@
 RequireAdmin
 
 ### Privacy Tweaks ###
-DisableTelemetry                # EnableTelemetry
-# DisableWebSearch              # EnableWebSearch
-# DisableAppSuggestions           # EnableAppSuggestions
+DisableTelemetry
+# DisableAppSuggestions
 # DisableActivityHistory          # EnableActivityHistory
 # DisableSensors                # EnableSensors
 # DisableLocation                 # EnableLocation
@@ -24,29 +23,10 @@ DisableWebLangList              # EnableWebLangList
 # DisableCamera                 # EnableCamera
 # DisableMicrophone             # EnableMicrophone
 DisableErrorReporting           # EnableErrorReporting
-# SetP2PUpdateLocal             # SetP2PUpdateInternet          # SetP2PUpdateDisable
 DisableDiagTrack                # EnableDiagTrack
 DisableWAPPush                  # EnableWAPPush
 # EnableClearRecentFiles        # DisableClearRecentFiles
 # DisableRecentFiles            # EnableRecentFiles
-
-### UWP Privacy Tweaks ###
-DisableUWPBackgroundApps        # EnableUWPBackgroundApps
-# DisableUWPVoiceActivation     # EnableUWPVoiceActivation
-# DisableUWPNotifications       # EnableUWPNotifications
-# DisableUWPAccountInfo         # EnableUWPAccountInfo
-# DisableUWPContacts            # EnableUWPContacts
-# DisableUWPCalendar            # EnableUWPCalendar
-# DisableUWPPhoneCalls          # EnableUWPPhoneCalls
-# DisableUWPCallHistory         # EnableUWPCallHistory
-# DisableUWPEmail               # EnableUWPEmail
-# DisableUWPTasks               # EnableUWPTasks
-# DisableUWPMessaging           # EnableUWPMessaging
-# DisableUWPRadios              # EnableUWPRadios
-# DisableUWPOtherDevices        # EnableUWPOtherDevices
-# DisableUWPDiagInfo            # EnableUWPDiagInfo
-# DisableUWPFileSystem          # EnableUWPFileSystem
-# DisableUWPSwapFile            # EnableUWPSwapFile
 
 ### Security Tweaks ###
 # SetUACLow                     # SetUACHigh
@@ -63,9 +43,9 @@ HideAccountProtectionWarn       # ShowAccountProtectionWarn
 DisableDownloadBlocking       # EnableDownloadBlocking
 # DisableScriptHost               # EnableScriptHost
 # EnableDotNetStrongCrypto        # DisableDotNetStrongCrypto
-EnableF8BootMenu                # DisableF8BootMenu
-DisableBootRecovery           # EnableBootRecovery
-DisableRecoveryAndReset       # EnableRecoveryAndReset
+# EnableF8BootMenu                # DisableF8BootMenu
+# DisableBootRecovery           # EnableBootRecovery
+# DisableRecoveryAndReset       # EnableRecoveryAndReset
 SetDEPOptOut                    # SetDEPOptIn
 
 ### Network Tweaks ###
@@ -115,29 +95,22 @@ EnableNTFSLongPaths             # DisableNTFSLongPaths
 # DisableAutoRebootOnCrash      # EnableAutoRebootOnCrash
 
 ### UI Tweaks ###
-EnableActionCenter              # DisableActionCenter
-DisableLockScreen               # EnableLockScreen
+# DisableLockScreen               # EnableLockScreen
 # DisableLockScreenRS1          # EnableLockScreenRS1
 # HideNetworkFromLockScreen       # ShowNetworkOnLockScreen
-# HideShutdownFromLockScreen      # ShowShutdownOnLockScreen
-DisableLockScreenBlur           # EnableLockScreenBlur
+# HideShutdownFromLockScreen      # ShowShutdownFromLockScreen
 # DisableAeroShake              # EnableAeroShake
 DisableAccessibilityKeys        # EnableAccessibilityKeys
 ShowTaskManagerDetails          # HideTaskManagerDetails
 ShowFileOperationsDetails       # HideFileOperationsDetails
 # EnableFileDeleteConfirm       # DisableFileDeleteConfirm
-HideTaskbarSearch               # ShowTaskbarSearchIcon         # ShowTaskbarSearchBox
-HideTaskView                    # ShowTaskView
 # ShowSmallTaskbarIcons           # ShowLargeTaskbarIcons
-SetTaskbarCombineAlways       # SetTaskbarCombineNever        # SetTaskbarCombineWhenFull
-HideTaskbarPeopleIcon           # ShowTaskbarPeopleIcon
 # ShowTrayIcons                   # HideTrayIcons
 # ShowSecondsInTaskbar          # HideSecondsFromTaskbar
 DisableSearchAppInStore         # EnableSearchAppInStore
 DisableNewAppPrompt             # EnableNewAppPrompt
 # HideRecentlyAddedApps         # ShowRecentlyAddedApps
 # HideMostUsedApps              # ShowMostUsedApps
-# SetWinXMenuPowerShell         # SetWinXMenuCmd
 # SetControlPanelSmallIcons     # SetControlPanelLargeIcons     # SetControlPanelCategories
 DisableShortcutInName           # EnableShortcutInName
 # HideShortcutArrow             # ShowShortcutArrow
@@ -209,7 +182,6 @@ UninstallThirdPartyBloat
 DisableXboxFeatures             # EnableXboxFeatures
 # DisableFullscreenOptims       # EnableFullscreenOptims
 DisableFirstLogonAnimation      # EnableFirstLogonAnimation
-DisableMediaSharing             # EnableMediaSharing
 # DisableMediaOnlineAccess      # EnableMediaOnlineAccess
 # EnableDeveloperMode           # DisableDeveloperMode
 # UninstallWorkFolders          # InstallWorkFolders
@@ -228,13 +200,6 @@ UninstallPowerShellISE        # InstallPowerShellISE
 UninstallXPSPrinter             # InstallXPSPrinter
 RemoveFaxPrinter                # AddFaxPrinter
 # UninstallFaxAndScan           # InstallFaxAndScan
-
-### Server Specific Tweaks ###
-# HideServerManagerOnLogin      # ShowServerManagerOnLogin
-# DisableShutdownTracker        # EnableShutdownTracker
-# DisablePasswordPolicy         # EnablePasswordPolicy
-# DisableCtrlAltDelLogin        # EnableCtrlAltDelLogin
-# EnableAudio                   # DisableAudio
 
 ### Unpinning ###
 # UnpinStartMenuTiles
