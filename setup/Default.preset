@@ -96,7 +96,6 @@ EnableNTFSLongPaths             # DisableNTFSLongPaths
 
 ### UI Tweaks ###
 # DisableLockScreen               # EnableLockScreen
-# DisableLockScreenRS1          # EnableLockScreenRS1
 # HideNetworkFromLockScreen       # ShowNetworkOnLockScreen
 # HideShutdownFromLockScreen      # ShowShutdownFromLockScreen
 # DisableAeroShake              # EnableAeroShake
@@ -110,7 +109,6 @@ ShowFileOperationsDetails       # HideFileOperationsDetails
 DisableSearchAppInStore         # EnableSearchAppInStore
 DisableNewAppPrompt             # EnableNewAppPrompt
 # HideRecentlyAddedApps         # ShowRecentlyAddedApps
-# HideMostUsedApps              # ShowMostUsedApps
 # SetControlPanelSmallIcons     # SetControlPanelLargeIcons     # SetControlPanelCategories
 DisableShortcutInName           # EnableShortcutInName
 # HideShortcutArrow             # ShowShortcutArrow
@@ -193,17 +191,10 @@ UninstallPowerShellISE        # InstallPowerShellISE
 # UninstallSSHClient            # InstallSSHClient
 # InstallSSHServer              # UninstallSSHServer
 # InstallTelnetClient           # UninstallTelnetClient
-# InstallNET23                  # UninstallNET23
-# SetPhotoViewerAssociation       # UnsetPhotoViewerAssociation
-# AddPhotoViewerOpenWith          # RemovePhotoViewerOpenWith
 # UninstallPDFPrinter           # InstallPDFPrinter
 UninstallXPSPrinter             # InstallXPSPrinter
 RemoveFaxPrinter                # AddFaxPrinter
 # UninstallFaxAndScan           # InstallFaxAndScan
-
-### Unpinning ###
-# UnpinStartMenuTiles
-# UnpinTaskbarIcons
 
 ### Auxiliary Functions ###
 WaitForKey
