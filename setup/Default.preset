@@ -10,9 +10,6 @@ RequireAdmin
 
 ### Privacy Tweaks ###
 DisableTelemetry                # EnableTelemetry
-DisableCortana                  # EnableCortana
-DisableWiFiSense                # EnableWiFiSense
-# DisableSmartScreen            # EnableSmartScreen
 # DisableWebSearch              # EnableWebSearch
 # DisableAppSuggestions           # EnableAppSuggestions
 # DisableActivityHistory          # EnableActivityHistory
@@ -66,7 +63,6 @@ HideAccountProtectionWarn       # ShowAccountProtectionWarn
 DisableDownloadBlocking       # EnableDownloadBlocking
 # DisableScriptHost               # EnableScriptHost
 # EnableDotNetStrongCrypto        # DisableDotNetStrongCrypto
-# EnableMeltdownCompatFlag      # DisableMeltdownCompatFlag
 EnableF8BootMenu                # DisableF8BootMenu
 DisableBootRecovery           # EnableBootRecovery
 DisableRecoveryAndReset       # EnableRecoveryAndReset
@@ -76,7 +72,6 @@ SetDEPOptOut                    # SetDEPOptIn
 SetCurrentNetworkPrivate        # SetCurrentNetworkPublic
 # SetUnknownNetworksPrivate     # SetUnknownNetworksPublic
 # DisableNetDevicesAutoInst     # EnableNetDevicesAutoInst
-DisableHomeGroups             # EnableHomeGroups
 # DisableSMB1                   # EnableSMB1
 # DisableSMBServer              # EnableSMBServer
 # DisableNetBIOS                # EnableNetBIOS
@@ -197,8 +192,6 @@ HidePicturesFromThisPC          # ShowPicturesInThisPC
 # HidePicturesFromExplorer      # ShowPicturesInExplorer
 HideVideosFromThisPC            # ShowVideosInThisPC
 # HideVideosFromExplorer        # ShowVideosInExplorer
-Hide3DObjectsFromThisPC         # Show3DObjectsInThisPC
-# Hide3DObjectsFromExplorer     # Show3DObjectsInExplorer
 # HideNetworkFromExplorer       # ShowNetworkInExplorer
 # HideIncludeInLibraryMenu      # ShowIncludeInLibraryMenu
 # HideGiveAccessToMenu          # ShowGiveAccessToMenu
@@ -210,25 +203,18 @@ DisableThumbsDBOnNetwork        # EnableThumbsDBOnNetwork
 ### Application Tweaks ###
 # DisableOneDrive                 # EnableOneDrive
 # UninstallOneDrive               # InstallOneDrive
-UninstallMsftBloat              # InstallMsftBloat
-UninstallThirdPartyBloat        # InstallThirdPartyBloat
+UninstallMsftBloat
+UninstallThirdPartyBloat
 # UninstallWindowsStore         # InstallWindowsStore
 DisableXboxFeatures             # EnableXboxFeatures
 # DisableFullscreenOptims       # EnableFullscreenOptims
-DisableAdobeFlash               # EnableAdobeFlash
-DisableEdgePreload              # EnableEdgePreload
-DisableEdgeShortcutCreation     # EnableEdgeShortcutCreation
-DisableIEFirstRun               # EnableIEFirstRun
 DisableFirstLogonAnimation      # EnableFirstLogonAnimation
 DisableMediaSharing             # EnableMediaSharing
 # DisableMediaOnlineAccess      # EnableMediaOnlineAccess
 # EnableDeveloperMode           # DisableDeveloperMode
-# UninstallMediaPlayer          # InstallMediaPlayer
-# UninstallInternetExplorer     # InstallInternetExplorer
 # UninstallWorkFolders          # InstallWorkFolders
 # UninstallHelloFace            # InstallHelloFace
 UninstallMathRecognizer       # InstallMathRecognizer
-# UninstallPowerShellV2         # InstallPowerShellV2
 UninstallPowerShellISE        # InstallPowerShellISE
 # InstallLinuxSubsystem         # UninstallLinuxSubsystem
 # InstallHyperV                 # UninstallHyperV
@@ -248,7 +234,6 @@ RemoveFaxPrinter                # AddFaxPrinter
 # DisableShutdownTracker        # EnableShutdownTracker
 # DisablePasswordPolicy         # EnablePasswordPolicy
 # DisableCtrlAltDelLogin        # EnableCtrlAltDelLogin
-# DisableIEEnhancedSecurity     # EnableIEEnhancedSecurity
 # EnableAudio                   # DisableAudio
 
 ### Unpinning ###
