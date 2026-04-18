@@ -10,11 +10,7 @@ RequireAdmin
 
 ### Privacy Tweaks ###
 DisableTelemetry
-# DisableAppSuggestions
-# DisableActivityHistory          # EnableActivityHistory
-# DisableSensors                # EnableSensors
-# DisableLocation                 # EnableLocation
-# DisableMapUpdates               # EnableMapUpdates
+DisableAppSuggestions
 DisableFeedback                 # EnableFeedback
 DisableTailoredExperiences      # EnableTailoredExperiences
 DisableAdvertisingID            # EnableAdvertisingID
@@ -26,56 +22,32 @@ DisableWAPPush                  # EnableWAPPush
 # DisableRecentFiles            # EnableRecentFiles
 
 ### Security Tweaks ###
-# SetUACLow                     # SetUACHigh
-# EnableSharingMappedDrives     # DisableSharingMappedDrives
-# DisableAdminShares              # EnableAdminShares
-# DisableFirewall               # EnableFirewall
 HideAccountProtectionWarn       # ShowAccountProtectionWarn
 DisableDownloadBlocking       # EnableDownloadBlocking
 # EnableDotNetStrongCrypto        # DisableDotNetStrongCrypto
-# EnableF8BootMenu                # DisableF8BootMenu
-# DisableBootRecovery           # EnableBootRecovery
-# DisableRecoveryAndReset       # EnableRecoveryAndReset
 SetDEPOptOut                    # SetDEPOptIn
 
 ### Network Tweaks ###
 SetCurrentNetworkPrivate        # SetCurrentNetworkPublic
 # SetUnknownNetworksPrivate     # SetUnknownNetworksPublic
-# DisableNetDevicesAutoInst     # EnableNetDevicesAutoInst
-# DisableSMBServer              # EnableSMBServer
-# DisableLLDP                   # EnableLLDP
-# DisableLLTD                   # EnableLLTD
-# DisableMSNetClient            # EnableMSNetClient
-# DisableQoS                    # EnableQoS
-# DisableNCSIProbe              # EnableNCSIProbe
 # DisableConnectionSharing      # EnableConnectionSharing
 DisableRemoteAssistance         # EnableRemoteAssistance
 EnableRemoteDesktop           # DisableRemoteDesktop
 
 ### Service Tweaks ###
-# DisableUpdateMSRT             # EnableUpdateMSRT
-# DisableUpdateDriver           # EnableUpdateDriver
 EnableUpdateMSProducts          # DisableUpdateMSProducts
-# DisableUpdateAutoDownload     # EnableUpdateAutoDownload
 DisableUpdateRestart            # EnableUpdateRestart
 DisableMaintenanceWakeUp        # EnableMaintenanceWakeUp
 # DisableAutoRestartSignOn      # EnableAutoRestartSignOn
 DisableSharedExperiences        # EnableSharedExperiences
 DisableAutoplay                 # EnableAutoplay
 DisableAutorun                  # EnableAutorun
-DisableRestorePoints          # EnableRestorePoints
-# EnableStorageSense            # DisableStorageSense
-# DisableDefragmentation        # EnableDefragmentation
-# DisableIndexing               # EnableIndexing
-# DisableRecycleBin             # EnableRecycleBin
+# DisableRestorePoints          # EnableRestorePoints
 EnableNTFSLongPaths             # DisableNTFSLongPaths
-# DisableNTFSLastAccess         # EnableNTFSLastAccess
 # SetBIOSTimeUTC                # SetBIOSTimeLocal
 # EnableHibernation             # DisableHibernation
 # DisableSleepButton            # EnableSleepButton
 # DisableSleepTimeout           # EnableSleepTimeout
-# DisableFastStartup            # EnableFastStartup
-# DisableAutoRebootOnCrash      # EnableAutoRebootOnCrash
 
 ### UI Tweaks ###
 DisableAccessibilityKeys        # EnableAccessibilityKeys
@@ -139,17 +111,12 @@ HideVideosFromThisPC            # ShowVideosInThisPC
 # HideIncludeInLibraryMenu      # ShowIncludeInLibraryMenu
 # HideGiveAccessToMenu          # ShowGiveAccessToMenu
 # HideShareMenu                 # ShowShareMenu
-# DisableThumbnails             # EnableThumbnails
-DisableThumbnailCache           # EnableThumbnailCache
+# DisableThumbnailCache           # EnableThumbnailCache
 DisableThumbsDBOnNetwork        # EnableThumbsDBOnNetwork
 
 ### Application Tweaks ###
-# DisableOneDrive                 # EnableOneDrive
-# UninstallOneDrive               # InstallOneDrive
 UninstallMsftBloat
 UninstallThirdPartyBloat
-# UninstallWindowsStore         # InstallWindowsStore
-# DisableFullscreenOptims       # EnableFullscreenOptims
 # DisableMediaOnlineAccess      # EnableMediaOnlineAccess
 # EnableDeveloperMode           # DisableDeveloperMode
 # UninstallWorkFolders          # InstallWorkFolders
